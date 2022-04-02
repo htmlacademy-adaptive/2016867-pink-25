@@ -1,12 +1,232 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
-  </head>
-  <body>
+<html class="page" lang="ru">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Пинк</title>
+</head>
 
-  </body>
+<body class="page__body">
+  <header class="header">
+    <div class="logo">
+      <a class="logo__link" href="index.html">
+        <img class="logo__img" src="images/pink-logo.svg" alt="Логотип Пинк." width="74" height="23">
+      </a>
+    </div>
+    <nav class="navigation">
+      <button class="navigation__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a class="navigation__link" href="index.html">Главная</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Фотографии</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Конкурс</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">HTML ACADEMY</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-container">
+    <h1 class="visually-hidden">Приложение Пинк.</h1>
+    <div class="intro">
+      <p class="intro__text">Взгляните на жизнь иначе!</p>
+      <img class="intro__img" src="images/phone-screen.png" alt="Пример работы приложения." width="320" height="286">
+    </div>
+    <section class="store">
+      <a class="store__download" href="#">Скачать приложение</a>
+      <a class="store__link" href="#">
+        <img class="store__icon" src="images/apple-logo.svg" alt="Скачать приложение для apple." width="47" height="56">
+      </a>
+      <a class="store__link" href="#">
+        <img class="store__icon" src="images/android-logo.svg" alt="Скачать приложение для andriod." width="43" height="47">
+      </a>
+      <a class="store__link" href="#">
+        <img class="store__icon" src="images/microsoft-logo.svg" alt="Скачать приложение для microsoft." width="44" height="41">
+      </a>
+      <p class="store_platforms">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+    </section>
+    <section class="description-app">
+      <h2 class="visually-hidden">Описание приложения.</h2>
+      <p class="description-app__intro">Устали от серости мегаполиса?</p>
+      <p class="description-app__intro">Нам есть, что вам предложить!</p>
+      <ul class="description-app__list">
+        <li class="description-app__item">
+          <p class="description-app__title">Поднимает настроение</p>
+          <p class="description-app__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+        </li>
+        <li class="description-app__item">
+          <p class="description-app__title">Меняет мир вокруг</p>
+          <p class="description-app__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+        </li>
+        <li class="description-app__item">
+          <p class="description-app__title">Заводит новых друзей</p>
+          <p class="description-app__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+        </li>
+      </ul>
+      <img class="description-app__img" src="images/phone-screen-smile.png" alt="Пример работы приложения." width="157" height="320">
+    </section>
+    <section class="reviews">
+      <h2 class="visually-hidden">Отзывы о приложении.</h2>
+      <ul class="reviews__list slider__list">
+        <li class="reviews__item slider__item">
+          <p class="reviews__autor">
+            Николай Петров
+          </p>
+          <q class="reviews__comment">
+            Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+          </q>
+        </li>
+        <li class="reviews__item slider__item">
+          <p class="reviews__autor">
+            Николай Петров
+          </p>
+          <q class="reviews__comment">
+            Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+          </q>
+        </li>
+        <li class="reviews__item slider__item">
+          <p class="reviews__autor">
+            Николай Петров
+          </p>
+          <q class="reviews__comment">
+            Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+          </q>
+        </li>
+      </ul>
+      <div class="reviews__toggles slider__toggles">
+        <button class="slider__toggle slider__toggle--current" type="button">1</button>
+        <button class="slider__toggle" type="button">2</button>
+        <button class="slider__toggle" type="button">3</button>
+      </div>
+    </section>
+    <section class="tariffs">
+      <h2 class="visually-hidden">Стоимость тарифов приложения.</h2>
+      <!-- ЗДЕСЬ ТАБЛИЦА ТАРИФОВ -->
+      <div class="tariffs__wrapper">
+        <table class="tariffs-table">
+          <thead class="tariffs-table__header">
+            <tr>
+              <th class="tariffs-table__cell tariffs-table__cell--caption"></th>
+              <th class="tariffs-table__cell">
+                <div class="tariffs-table__title">База</div>
+                <div class="tariffs-table__cost">1,99 USD</div>
+              </th>
+              <th class="tariffs-table__cell tariffs-table__cell--hit">
+                <div class="tariffs-table__title">Стандарт</div>
+                <div class="tariffs-table__cost">3,99 USD</div>
+              </th>
+              <th class="tariffs-table__cell">
+                <div class="tariffs-table__title">Анлим</div>
+                <div class="tariffs-table__cost">9,99 USD</div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="tariffs-table__row">
+              <th class="tariffs-table__cell tariffs-table__cell--caption">Розовый фильтр</th>
+              <td class="tariffs-table__cell">
+                <span class="tariffs-table__mark tariffs-table__mark--check">Розовый фильтр</span>
+              </td>
+              <td class="tariffs-table__cell">
+                <span class="tariffs-table__mark tariffs-table__mark--check">Розовый фильтр</span>
+              </td>
+              <td class="tariffs-table__cell">
+                <span class="tariffs-table__mark tariffs-table__mark--check">Розовый фильтр</span>
+              </td>
+            </tr>
+            <tr class="tariffs-table__row">
+              <th class="tariffs-table__cell tariffs-table__cell--caption">Смайлики</th>
+              <td class="tariffs-table__cell">
+                <span class="tariffs-table__mark tariffs-table__mark--no-check">Смайлики</span>
+              </td>
+              <td class="tariffs-table__cell">
+                <span class="tariffs-table__mark tariffs-table__mark--check">Смайлики</span>
+              </td>
+              <td class="tariffs-table__cell">
+                <span class="tariffs-table__mark tariffs-table__mark--check">Смайлики</span>
+              </td>
+            </tr>
+            <tr class="tariffs-table__row">
+              <th class="tariffs-table__cell tariffs-table__cell--caption">Комментарии</th>
+              <td class="tariffs-table__cell">
+                <span class="tariffs-table__mark tariffs-table__mark--no-check">Комментарии</span>
+              </td>
+              <td class="tariffs-table__cell">
+                <span class="tariffs-table__mark tariffs-table__mark--no-check">Комментарии</span>
+              </td>
+              <td class="tariffs-table__cell">
+                <span class="tariffs-table__mark tariffs-table__mark--check">Комментарии</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tariffs__toggles slider__toggles">
+        <button class="slider__toggle" type="button">1</button>
+        <button class="slider__toggle slider__toggle--current" type="button">2</button>
+        <button class="slider__toggle" type="button">3</button>
+      </div>
+    </section>
+    <section class="contacts">
+      <h2 class="visually-hidden">Контакты разработчиков приложения.</h2>
+      <p class="contacts__intro">Остались вопросы? Свяжитесь с нами!</p>
+      <div class="contacts__phone">
+        <h3 class="contacts__title">Звоните:</h3>
+        <a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+      </div>
+      <div class="contacts__mail">
+        <h3 class="contacts__title">Пишите:</h3>
+        <a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </div>
+      <div class="contacts__adress">
+        <h3 class="contacts__title">Приезжайте в гости:</h3>
+        <p class="contacts__link">ул. Большая Конюшенная, 19/8</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3018930805114!2d30.321953058721924!3d59.93871650000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1648889368990!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <h2 class="visually-hidden">О разработчиках.</h2>
+    <div class="footer__logo">
+      <a class="footer__link" href="index.html">
+        <svg width="59" height="40" viewBox="0 0 59 40" fill="none" role="img" aria-label="Логотип приложения (очки)." xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m53.9 6.59 5.03 21.14a1.42 1.42 0 0 1-.75 1.72c-.2.09-.43.13-.65.11h-4.01a11.63 11.63 0 0 1-11.49 10.32c-5.92 0-10.8-4.5-11.49-10.32h-1.96A11.75 11.75 0 0 1 16.97 40c-6 0-10.94-4.57-11.61-10.47H1.45A1.36 1.36 0 0 1 .3 29a1.42 1.42 0 0 1-.24-1.27L5.1 6.6C5.46 4.26 7.64 0 13.5 0c.38 0 .76.16 1.03.44a1.5 1.5 0 0 1 0 2.1c-.27.27-.65.43-1.03.43-4.71 0-5.44 3.7-5.5 4.1L3.34 26.6h2.03a11.75 11.75 0 0 1 11.6-10.3c5.94 0 10.84 4.48 11.6 10.3h1.99a11.63 11.63 0 0 1 11.47-10.19c5.89 0 10.75 4.46 11.48 10.23v-.06h2.14L51 7.08c-.07-.41-.77-4.1-5.5-4.1-.39 0-.76-.17-1.03-.44a1.5 1.5 0 0 1 0-2.1c.27-.28.64-.44 1.03-.44 5.85 0 8.03 4.26 8.38 6.59ZM25.66 29.56a9.12 9.12 0 0 0-.02-2.97 8.85 8.85 0 0 0-8.68-7.38 8.85 8.85 0 0 0-8.82 8.94 8.85 8.85 0 0 0 8.81 8.94c4.4 0 8.04-3.26 8.71-7.53Zm24.94 0a8.75 8.75 0 0 0-8.58-10.23 8.75 8.75 0 0 0-8.58 10.23 8.73 8.73 0 0 0 8.58 7.4c4.33 0 7.91-3.2 8.58-7.4Z" fill="#D22856"/></svg>
+        <svg width="74" height="23" viewBox="0 0 74 23" fill="none" role="img" aria-label="Логотип приложения PINK." xmlns="http://www.w3.org/2000/svg"><path d="M0 1.55A1.29 1.29 0 0 1 1.26.26h7.13c5.06 0 8.39 2.7 8.39 7.13v.06c0 4.85-4.04 7.36-8.8 7.36H2.53v6.8A1.28 1.28 0 0 1 1.27 23 1.27 1.27 0 0 1 0 21.61V1.55Zm8.07 10.97c3.7 0 6.14-2 6.14-4.99v-.06c0-3.2-2.4-4.87-5.96-4.87H2.6v9.88l5.48.04ZM21.6 1.39A1.28 1.28 0 0 1 22.85 0a1.27 1.27 0 0 1 1.27 1.39V21.6A1.28 1.28 0 0 1 22.86 23a1.27 1.27 0 0 1-1.27-1.39V1.4ZM30.67 1.42A1.28 1.28 0 0 1 31.93.17h.34a1.54 1.54 0 0 1 1.29.74l13.6 17.4V1.36A1.24 1.24 0 0 1 48.39.12a1.23 1.23 0 0 1 1.23 1.24v20.3a1.14 1.14 0 0 1-1.15 1.17h-.13a1.7 1.7 0 0 1-1.31-.78L33.12 4.25v17.4a1.26 1.26 0 0 1-1.2 1.25 1.23 1.23 0 0 1-1.2-1.25V1.42h-.05ZM55.94 1.39A1.28 1.28 0 0 1 57.2 0a1.27 1.27 0 0 1 1.26 1.39v12.3L71.23.54c.26-.27.62-.43 1-.45a1.27 1.27 0 0 1 1.21 1.26 1.29 1.29 0 0 1-.41.9l-7.95 7.9 8.57 10.52c.23.26.35.6.35.94a1.31 1.31 0 0 1-1.34 1.28 1.23 1.23 0 0 1-1-.58L63.3 11.86l-4.83 4.85v4.88a1.27 1.27 0 0 1-1.26 1.27 1.26 1.26 0 0 1-1.26-1.27V1.4h-.01Z" fill="#283645"/></svg>
+      </a>
+    </div>
+    <section class="social">
+      <h3 class="visually-hidden">Мы в социальных сетях</h3>
+      <ul class="social_list">
+        <li class="social__item social__item--vk">
+          <a class="button social__button" href="https://vk.com/htmlacademy">
+            <svg class="social__icon" role="img" aria-label="VKontakte." width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.59 4.71c.12-.4 0-.71-.6-.71h-1.97c-.5 0-.73.26-.85.55 0 0-1 2.4-2.42 3.95-.46.45-.67.6-.92.6-.13 0-.32-.15-.32-.56V4.71c0-.5-.13-.71-.55-.71h-3.1c-.3 0-.5.23-.5.44 0 .47.71.58.78 1.89v2.85c0 .62-.11.74-.36.74-.67 0-2.3-2.41-3.26-5.17-.18-.53-.37-.75-.87-.75H.68C.1 4 0 4.26 0 4.55c0 .5.67 3.05 3.1 6.41 1.64 2.3 3.93 3.54 6.01 3.54 1.26 0 1.41-.28 1.41-.75V12c0-.55.12-.66.52-.66.29 0 .79.14 1.96 1.25 1.33 1.31 1.55 1.9 2.3 1.9h1.97c.57 0 .85-.28.68-.82a8.36 8.36 0 0 0-1.66-2.27c-.46-.53-1.14-1.1-1.35-1.4-.3-.36-.21-.52 0-.85 0 0 2.4-3.32 2.65-4.45Z" fill="#D22856"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h18v18H0z"/></clipPath></defs></svg>
+          </a>
+        </li>
+        <li class="social__item social__item--telegramm">
+          <a class="button social__button" href="tg://resolve?domain=htmlacademy">
+            <svg class="social__icon" role="img" aria-label="Telegramm." width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m15.7 1.2-2.37 11.21c-.18.8-.65.99-1.31.62l-3.63-2.67-1.74 1.68c-.2.2-.36.35-.73.35l.26-3.69 6.71-6.06c.3-.26-.06-.4-.45-.14l-8.3 5.22L.57 6.6c-.78-.24-.8-.77.16-1.15L14.7.07c.65-.24 1.21.14 1 1.13Z" fill="#D22856"/></svg>
+          </a>
+        </li>
+        <li class="social__item social__item--youtube">
+          <a class="button social__button" href="https://www.youtube.com/c/HTMLAcademyRUS">
+            <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83 12.8a1.25 1.25 0 0 1-1.28.04 1.1 1.1 0 0 1-.44-.46.97.97 0 0 1-.1-.6V1.22c-.03-.2 0-.41.1-.6C.2.42.35.27.55.16a1.26 1.26 0 0 1 1.28.03l12.4 5.5c1.03.45 1.03 1.17 0 1.62l-12.4 5.5Z" fill="#D22856"/></svg>
+          </a>
+        </li>
+      </ul>
+      <div class="copyright">
+        <span class="copyright__title">Разработано</span>
+        <a class="copyright__logo" href="https://htmlacademy.ru/">
+          <svg class="copyright__icon" role="img" aria-label="Логотип HTML-academy." width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.64.02 13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0Zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26Zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83Zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24Z" fill="#D22856"/></svg>
+        </a>
+      </div>
+    </section>
+  </footer>
+</body>
+
 </html>
