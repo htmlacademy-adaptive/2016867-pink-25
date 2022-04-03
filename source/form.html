@@ -34,25 +34,25 @@
     </nav>
   </header>
   <main class="main-container">
-    <h1 class="main-container__text">Конкурс на самое безбашенное путешествие с Пинк</h1>
+    <h1 class="main-container__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
     <div class="intro">
       <span class="intro__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</span>
       <span class="intro__text intro__text--no-mobile">Пожалуйста, заполните форму ниже:</span>
     </div>
     <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-      <fieldset class="form__id id">
+      <fieldset class="form__person person">
         <legend class="form__title visually-hidden">Укажите свои данные:</legend>
-        <ul class="id__list">
-          <li class="id__item">
-            <label class="id__label" for="surname">Фамилия:</label>
+        <ul class="person__list">
+          <li class="person__item">
+            <label class="person__label" for="surname">Фамилия:</label>
             <input type="text" id="surname" name="surname" placeholder="Укажите фамилию *" required>
           </li>
-          <li class="id__item">
-            <label class="id__label" for="name">Имя:</label>
+          <li class="person__item">
+            <label class="person__label" for="name">Имя:</label>
             <input type="text" id="name" name="name" placeholder="Введите ваше имя *" required>
           </li>
-          <li class="id__item">
-            <label class="id__label" for="middlename">Отчество:</label>
+          <li class="person__item">
+            <label class="person__label" for="middlename">Отчество:</label>
             <input type="text" id="middlename" name="middlename" placeholder="Ну и отчество тоже">
           </li>
         </ul>
@@ -61,58 +61,58 @@
         <legend class="form__title">Ваши безбашенные достижения в путешествии</legend>
         <ul class="achievements__list">
           <li class="achievements__item">
-            <label class="control">
+            <label class="achievements__control control">
               <input class="control__input" type="checkbox" name="shark-selfie" checked>
-              <span class="check-box"></span>
+              <span class="control__check-box"></span>
               Сделал селфи с акулой
             </label>
           </li>
           <li class="achievements__item">
-            <label class="control">
+            <label class="achievements__control control">
               <input class="control__input" type="checkbox" name="burned" checked>
-              <span class="check-box"></span>
+              <span class="control__check-box"></span>
               Обгорел на пляже
             </label>
           </li>
           <li class="achievements__item">
-            <label class="control">
+            <label class="achievements__control control">
               <input class="control__input" type="checkbox" name="chack-norris">
-              <span class="check-box"></span>
+              <span class="control__check-box"></span>
               Видел Чака Норриса
             </label>
           </li>
           <li class="achievements__item">
-            <label class="control">
+            <label class="achievements__control control">
               <input class="control__input" type="checkbox" name="souvenires">
-              <span class="check-box"></span>
+              <span class="control__check-box"></span>
               Накупил сувениров
             </label>
           </li>
           <li class="achievements__item">
-            <label class="control">
+            <label class="achievements__control control">
               <input class="control__input" type="checkbox" name="held-tower" checked>
-              <span class="check-box"></span>
+              <span class="control__check-box"></span>
               Удержал башню
             </label>
           </li>
           <li class="achievements__item">
-            <label class="control">
+            <label class="achievements__control control">
               <input class="control__input" type="checkbox" name="smashed-hotel">
-              <span class="check-box"></span>
+              <span class="control__check-box"></span>
               Разгромил отель
             </label>
           </li>
         </ul>
       </fieldset>
-      <fieldset class="form__id-contacts id-contacts">
+      <fieldset class="form__person-contacts person-contacts">
         <legend class="form__title">Контактная информация</legend>
-        <ul class="id-contacts__list">
-          <li class="id-contacts__item">
-            <label class="id-contacts__label" for="phone">Номер телефона:</label>
+        <ul class="person-contacts__list">
+          <li class="person-contacts__item">
+            <label class="person-contacts__label" for="phone">Номер телефона:</label>
             <input type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста">
           </li>
-          <li class="id-contacts__item">
-            <label class="id-contacts__label" for="email">Адрес почты:</label>
+          <li class="person-contacts__item">
+            <label class="person-contacts__label" for="email">Адрес почты:</label>
             <input type="email" id="email" name="email" placeholder="Введите почту *" required>
           </li>
         </ul>
@@ -121,23 +121,23 @@
         <legend class="form__title">С каким приложением путешествовали?</legend>
         <ul class="platform__list">
           <li class="platform__item">
-            <label class="control">
+            <label class="platform__control control">
               <input class="control__input" type="radio" name="platform" value="ios" checked>
-              <span class="radio"></span>
+              <span class="control__radio"></span>
               Pink для iOS
             </label>
           </li>
           <li class="platform__item">
-            <label class="control">
+            <label class="platform__control control">
               <input class="control__input" type="radio" name="platform" value="andriod">
-              <span class="radio"></span>
+              <span class="control__radio"></span>
               Pink на Android
             </label>
           </li>
           <li class="platform__item">
-            <label class="control">
+            <label class="platform__control control">
               <input class="control__input" type="radio" name="platform" value="windows">
-              <span class="radio"></span>
+              <span class="control__radio"></span>
               Windows Phone
             </label>
           </li>
@@ -151,8 +151,8 @@
       </fieldset>
       <fieldset class="form__submit submit">
         <input class="button form__button" type="submit" value="Отправить форму">
-        <div class="contest-form__label">
-          <em>*</em> &ndash; Обязательные <span class="mb-hidden  tb-hidden">для заполнения</span> поля
+        <div class="form__label">
+          <em>*</em> &ndash; Обязательные <span class="form__required">для заполнения</span> поля
         </div>
       </fieldset>
     </form>
