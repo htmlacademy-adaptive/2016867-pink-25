@@ -1,0 +1,13 @@
+.slider__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slider__item {
+  text-align: center;
+}
+
+.slider__item:not(:first-child) {
+  display: none;
+}
