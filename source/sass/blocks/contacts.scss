@@ -1,0 +1,29 @@
+.contacts__intro {
+  text-align: center;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 120%;
+}
+
+.contacts__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.contacts__link {
+  text-align: center;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
+  color: #d22856;
+}
+
+.contacts__map {
+  max-width: 100%;
+  background-color: #ffffff;
+  background-image: url("../../images/map.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}

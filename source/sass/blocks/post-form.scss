@@ -1,0 +1,19 @@
+.post-form__button {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+
+.post-form__button--submit {
+  border: 3px solid #d22856;
+  color: #d22856;
+}
+
+.post-form__button--reset {
+  color: #283645;
+  opacity: 0.1;
+  border: 3px solid #283645;
+}

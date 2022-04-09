@@ -1,0 +1,41 @@
+.modal {
+  display: none;
+  max-width: 320px;
+  position: fixed;
+  z-index: 5;
+  background-color: #ffffff;
+}
+
+.modal--fail {
+  top: 0;/*временное решение*/
+}
+
+.modal--success {
+  top: 200px;/*временное решение*/
+}
+
+.modal__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  text-align: center;
+  color: #000000;
+}
+
+.modal__content {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 171%;
+  text-align: center;
+}
+
+.modal__button {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 167%;
+  text-align: center;
+  color: #ffffff;
+  background: #2aab6d;
+  border: 2px solid #2aab6d;
+  border-radius: 1px;
+}
