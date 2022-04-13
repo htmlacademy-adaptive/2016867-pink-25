@@ -1,3 +1,8 @@
+.tariffs-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
 .tariffs-table__title {
   font-weight: 700;
   font-size: 16px;
@@ -10,10 +15,82 @@
   line-height: 167%;
 }
 
-.tariffs-table__cell {
-  width: 280px;
+.tariffs-table__head {
+  padding: 15px 15px;
+  margin: 0;
+  color: #ffffff;
+  background-color: #283645;
+  border-top: none;
 }
 
-.tariffs-table__cell--caption {
-  line-height: 214%;
+.tariffs-table__cell {
+  border: 2px solid #e5e5e5;
+  text-transform: uppercase;
+  border-collapse: collapse;
+  min-width: 50px; /*TODO это очень временно, чтобы не появлялся горизонтальный скролл*/
+
+  &--caption {
+    display: none;
+    line-height: 214%;
+  }
+
+  &--hit {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &--hit::after {
+    position: absolute;
+    top: 7px;
+    left: -35px;
+    content: "Хит";
+    width: 100px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 214%;
+    transform: rotate(-45deg);
+    text-transform: uppercase;
+    background-color: $pink;
+    color: #ffffff;
+  }
+
+  &--hidden {
+    border: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .tariffs-table__cell {
+    min-width: 150px;
+    max-width: 233px;
+
+    &--caption {
+      display: table-cell;
+      padding: 5px 15px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 214%;
+      text-transform: none;
+      text-align: start;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .tariffs-table__title {
+    font-size: 18px;
+    line-height: 167%;
+  }
+
+  .tariffs-table__cost {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 125%;
+  }
+
+  .tariffs-table__cell--caption {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 167%;
+  }
 }

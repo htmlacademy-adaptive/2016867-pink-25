@@ -1,15 +1,21 @@
 .header {
   background-color: #1d2631;
+  background-image: url("../../images/phone-screen.png"), url("../../images/background-mobile.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, 100% auto;
+  background-position: 50% 175px, 50% 0;
 }
 
 .header__wrapper {
-  background-color: #1d2631;
-  background-image: url("../../images/background-mobile.png");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .header__wrapper-nav {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   padding: 21px 20px;
   background: rgba(0, 0, 0, 0.3);
@@ -19,7 +25,52 @@
 .header__title {
   font-weight: 300;
   font-size: 24px;
-  line-height: 33px;
+  line-height: 129%;
   color: #ffffff;
   text-align: center;
+  margin: 0;
+  padding: 29px 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    background-position: right 175px, 50% 0;
+  }
+
+  .header__wrapper-nav {
+    padding: 43px 20px;
+  }
+
+  .header__wrapper {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .header__title {
+    font-size: 40px;
+    line-height: 120%;
+    padding: 29px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    background-position: right 175px, 50% 0;
+  }
+
+  .header__wrapper-nav {
+    padding: 21px 130px;
+  }
+
+  .header__wrapper {
+    padding-left: 130px;
+  }
+
+  .header__title {
+    font-size: 50px;
+    line-height: 136%;
+  }
 }

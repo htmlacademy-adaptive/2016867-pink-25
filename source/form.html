@@ -3,41 +3,40 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <title>Форма</title>
 </head>
 
 <body class="page__body">
   <header class="header">
-    <div class="header__wrapper">
-      <div class="container">
-        <div class="header__wrapper-nav">
-          <div class="header__logo logo">
-            <a class="logo__link" href="index.html">
-              <img class="logo__img" src="images/pink-logo.svg" alt="Логотип Пинк." width="74" height="23">
-            </a>
-          </div>
-          <nav class="header__navigation navigation">
-            <button class="navigation__toggle" type="button">
-              <span class="visually-hidden">Открыть меню</span>
-            </button>
-            <ul class="navigation__list">
-              <li class="navigation__item">
-                <a class="navigation__link" href="index.html">Главная</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="catalog.html">Фотографии</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link navigation__link--active" href="form.html">Конкурс</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="https://htmlacademy.ru/">HTML ACADEMY</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+    <div class="header__wrapper-nav">
+      <div class="header__logo logo">
+        <a class="logo__link" href="index.html">
+          <img class="logo__img" src="images/pink-logo.svg" alt="Логотип Пинк." width="74" height="23">
+        </a>
       </div>
+      <nav class="header__navigation navigation">
+        <button class="navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class=" navigation__link" href="index.html">Главная</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="catalog.html">Фотографии</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--active" href="form.html">Конкурс</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="https://htmlacademy.ru/">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__wrapper">
       <h1 class="header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
     </div>
   </header>
@@ -113,16 +112,16 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form__person-contacts person-contacts">
+        <fieldset class="form__person person person--contacts">
           <legend class="form__title">Контактная информация</legend>
-          <ul class="person-contacts__list">
-            <li class="person-contacts__item">
-              <label class="person-contacts__label" for="phone">Номер телефона:</label>
-              <input class="person-contacts__input" type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста">
+          <ul class="person__list">
+            <li class="person__item">
+              <label class="person__label" for="phone">Номер телефона:</label>
+              <input class="person__input" type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста">
             </li>
-            <li class="person-contacts__item">
-              <label class="person-contacts__label" for="email">Адрес почты:</label>
-              <input class="person-contacts__input" type="email" id="email" name="email" placeholder="Введите почту *" required>
+            <li class="person__item">
+              <label class="person__label" for="email">Адрес почты:</label>
+              <input class="person__input" type="email" id="email" name="email" placeholder="Введите почту *" required>
             </li>
           </ul>
         </fieldset>

@@ -1,17 +1,17 @@
 .modal {
   display: none;
-  max-width: 320px;
+  max-width: 100%;
   position: fixed;
   z-index: 5;
   background-color: #ffffff;
 }
 
 .modal--fail {
-  top: 0;/*временное решение*/
+  top: 0;/*TODO*/
 }
 
 .modal--success {
-  top: 200px;/*временное решение*/
+  top: 200px;/*TODO*/
 }
 
 .modal__title {
