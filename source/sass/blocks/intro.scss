@@ -1,14 +1,32 @@
+.intro {
+  background-color: #ffffff;
+}
+
 .intro__text {
   font-size: 14px;
   line-height: 214%;
   color: #283645;
   text-align: center;
+  margin: 0;
+
+  &--index {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 120%;
+    color: #ffffff;
+    text-align: center;
+    padding: 0 40px;
+  }
 }
 
-.intro__text--index {
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 120%;
-  color: #ffffff;
-  text-align: center;
+@media (min-width: $tablet-width) {
+  .intro {
+    padding: 50px 36px;
+  }
+
+  .intro__text {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 135%;
+  }
 }

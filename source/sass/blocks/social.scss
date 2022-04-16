@@ -1,5 +1,12 @@
-.social_list {
+.social__list {
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.social__item {
+  padding: 15px;
 }
