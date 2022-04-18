@@ -1,4 +1,22 @@
 .logo {
-  display: block;
+  display: flex;
+  align-items: center;
+  z-index: 11;
 }
-/*TODO*/
+
+.logo__link {
+  padding: 20px;
+
+  &:hover > .logo__img {
+    fill: #d22856;
+  }
+
+  &:active > .logo__img {
+    fill: #ffffff;
+    opacity: 0.3;
+  }
+}
+
+.logo__img {
+  fill: #ffffff;
+}

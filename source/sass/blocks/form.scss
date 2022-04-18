@@ -1,3 +1,19 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.form__button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.form__label {
+  text-align: center;
+}
+
 .form__label em {
   color: $pink;
 }
@@ -21,4 +37,67 @@
 
 .form__required {
   display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    padding: 0 22px;
+  }
+
+  .form__person {
+    order: 0;
+  }
+
+  .form__platform {
+    order: 2;
+  }
+
+  .form__person-contacts {
+    order: 3;
+  }
+
+  .form__achievements {
+    order: 4;
+  }
+
+  .form__emotions {
+    order: 5;
+  }
+
+  .form__button-wrapper {
+    order: 6;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form__button {
+    padding: 23px 55px;
+    width: 48%;
+  }
+
+  .form__required {
+    display: inline-block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form {
+    padding: 0 132px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form__person-contacts {
+    width: 100%;
+  }
+
+  .form__emotions {
+    width: 100%;
+  }
+
+  .form__button {
+    padding: 23px 55px;
+    width: 31%;
+  }
 }

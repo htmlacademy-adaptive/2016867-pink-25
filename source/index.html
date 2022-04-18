@@ -9,18 +9,22 @@
 </head>
 
 <body class="page__body">
-  <header class="header">
+  <header class="header header--main">
     <div class="header__wrapper-nav">
       <div class="header__logo logo">
         <a class="logo__link" href="index.html">
-          <img class="logo__img" src="images/pink-logo.svg" alt="Логотип Пинк." width="74" height="23">
+          <svg class="logo__img" width="74" height="23" viewBox="0 0 74 23" fill="none" role="img" aria-label="Логотип приложения PINK." xmlns="http://www.w3.org/2000/svg"><path d="M0 1.55A1.29 1.29 0 0 1 1.26.26h7.13c5.06 0 8.39 2.7 8.39 7.13v.06c0 4.85-4.04 7.36-8.8 7.36H2.53v6.8A1.28 1.28 0 0 1 1.27 23 1.27 1.27 0 0 1 0 21.61V1.55Zm8.07 10.97c3.7 0 6.14-2 6.14-4.99v-.06c0-3.2-2.4-4.87-5.96-4.87H2.6v9.88l5.48.04ZM21.6 1.39A1.28 1.28 0 0 1 22.85 0a1.27 1.27 0 0 1 1.27 1.39V21.6A1.28 1.28 0 0 1 22.86 23a1.27 1.27 0 0 1-1.27-1.39V1.4ZM30.67 1.42A1.28 1.28 0 0 1 31.93.17h.34a1.54 1.54 0 0 1 1.29.74l13.6 17.4V1.36A1.24 1.24 0 0 1 48.39.12a1.23 1.23 0 0 1 1.23 1.24v20.3a1.14 1.14 0 0 1-1.15 1.17h-.13a1.7 1.7 0 0 1-1.31-.78L33.12 4.25v17.4a1.26 1.26 0 0 1-1.2 1.25 1.23 1.23 0 0 1-1.2-1.25V1.42h-.05ZM55.94 1.39A1.28 1.28 0 0 1 57.2 0a1.27 1.27 0 0 1 1.26 1.39v12.3L71.23.54c.26-.27.62-.43 1-.45a1.27 1.27 0 0 1 1.21 1.26 1.29 1.29 0 0 1-.41.9l-7.95 7.9 8.57 10.52c.23.26.35.6.35.94a1.31 1.31 0 0 1-1.34 1.28 1.23 1.23 0 0 1-1-.58L63.3 11.86l-4.83 4.85v4.88a1.27 1.27 0 0 1-1.26 1.27 1.26 1.26 0 0 1-1.26-1.27V1.4h-.01Z"/></svg>
         </a>
       </div>
-      <nav class="header__navigation navigation">
+       <!--navigation--close - свернуть меню-->
+       <!--navigation--open - развернуть меню-->
+       <!--navigation--nojs - поведение при отключенном JS-->
+      <nav class="header__navigation navigation navigation--close navigation--nojs">
         <button class="navigation__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
+          <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
         <ul class="navigation__list">
+          <li class="navigation__item navigation__item--head"></li>
           <li class="navigation__item">
             <a class=" navigation__link navigation__link--active" href="index.html">Главная</a>
           </li>
@@ -37,9 +41,8 @@
       </nav>
     </div>
     <h1 class="visually-hidden">Приложение Пинк.</h1>
-    <div class="header__wrapper">
-      <h2 class="header__title">Взгляните на жизнь иначе!</h2>
-      <!-- <img class="header__img" src="images/phone-screen.png" alt="Пример работы приложения." width="320" height="286">-->
+    <div class="header__wrapper header__wrapper--index">
+      <h2 class="header__title header__title--index">Взгляните на жизнь иначе!</h2>
       <section class="store">
         <div class="container">
           <a class="store__download" href="#">Скачать приложение</a>
@@ -62,9 +65,9 @@
   <main class="main-container">
     <h1 class="visually-hidden">Приложение Пинк.</h1>
     <section class="description-app">
-      <div class="intro">
-        <p class="intro__text">Устали от серости мегаполиса?</p>
-        <p class="intro__text">Нам есть, что вам <br>предложить!</p>
+      <div class="intro intro--index">
+        <p class="intro__text intro__text--index">Устали от серости мегаполиса?</p>
+        <p class="intro__text intro__text--index">Нам есть, что вам <br>предложить!</p>
       </div>
       <div class="container">
         <h2 class="visually-hidden">Описание приложения.</h2>
@@ -87,6 +90,7 @@
             </li>
           </ul>
           <img class="description-app__img description-app__img--mobile" src="images/phone-screen-smile.png" alt="Пример работы приложения." width="157" height="320">
+          <img class="description-app__img description-app__img--tablet" src="images/phine-screen-tablet.png" alt="Пример работы приложения." width="268" height="547">
         </div>
       </div>
     </section>
@@ -155,21 +159,84 @@
           <tbody>
             <tr class="tariffs-table__row tariffs-table__row--filter">
               <th class="tariffs-table__cell tariffs-table__cell--caption">Розовый фильтр</th>
-              <td class="tariffs-table__cell tariffs-table__mark tariffs-table__mark--check"></td>
-              <td class="tariffs-table__cell tariffs-table__mark tariffs-table__mark--check"></td>
-              <td class="tariffs-table__cell tariffs-table__mark tariffs-table__mark--check"></td>
+              <td class="tariffs-table__cell">
+                <div class="tariffs-table__features tariffs-table__features--filter">
+                  <span class="visually-hidden">Розовый фильтр включен в тариф.</span>
+                  <svg class="tariffs-table__icon" width="31" height="21" viewBox="0 0 31 21" fill="none" role="img" aria-label="Данная функция входит в тариф." xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30.5559 0.429509C30.4134 0.293412 30.2439 0.185389 30.0571 0.111671C29.8703 0.0379536 29.67 0 29.4676 0C29.2653 0 29.065 0.0379536 28.8782 0.111671C28.6914 0.185389 28.5219 0.293412 28.3794 0.429509L10.3744 17.4958L2.5777 10.1097C2.28714 9.85325 1.90283 9.71362 1.50573 9.72025C1.10864 9.72689 0.72977 9.87928 0.448939 10.1453C0.168108 10.4114 0.00724504 10.7703 0.0002388 11.1464C-0.00676744 11.5226 0.140631 11.8867 0.41138 12.1619L9.29124 20.5741C9.4331 20.7094 9.60187 20.8167 9.7878 20.8898C9.97372 20.9629 10.1731 21.0004 10.3744 21C10.7806 20.9986 11.1698 20.8456 11.4576 20.5741L30.5559 2.48172C30.8405 2.20822 31 1.83963 31 1.45561C31 1.0716 30.8405 0.703003 30.5559 0.429509Z" fill="#3DC644"/>
+                  </svg>
+              </div>
+              </td>
+              <td class="tariffs-table__cell">
+                <div class="tariffs-table__features tariffs-table__features--filter">
+                  <span class="visually-hidden">Розовый фильтр включен в тариф.</span>
+                  <svg class="tariffs-table__icon" width="31" height="21" viewBox="0 0 31 21" fill="none" role="img" aria-label="Данная функция входит в тариф." xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30.5559 0.429509C30.4134 0.293412 30.2439 0.185389 30.0571 0.111671C29.8703 0.0379536 29.67 0 29.4676 0C29.2653 0 29.065 0.0379536 28.8782 0.111671C28.6914 0.185389 28.5219 0.293412 28.3794 0.429509L10.3744 17.4958L2.5777 10.1097C2.28714 9.85325 1.90283 9.71362 1.50573 9.72025C1.10864 9.72689 0.72977 9.87928 0.448939 10.1453C0.168108 10.4114 0.00724504 10.7703 0.0002388 11.1464C-0.00676744 11.5226 0.140631 11.8867 0.41138 12.1619L9.29124 20.5741C9.4331 20.7094 9.60187 20.8167 9.7878 20.8898C9.97372 20.9629 10.1731 21.0004 10.3744 21C10.7806 20.9986 11.1698 20.8456 11.4576 20.5741L30.5559 2.48172C30.8405 2.20822 31 1.83963 31 1.45561C31 1.0716 30.8405 0.703003 30.5559 0.429509Z" fill="#3DC644"/>
+                  </svg>
+              </div>
+              </td>
+              <td class="tariffs-table__cell">
+                <div class="tariffs-table__features tariffs-table__features--filter">
+                  <span class="visually-hidden">Розовый фильтр включен в тариф.</span>
+                  <svg class="tariffs-table__icon" width="31" height="21" viewBox="0 0 31 21" fill="none" role="img" aria-label="Данная функция входит в тариф." xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30.5559 0.429509C30.4134 0.293412 30.2439 0.185389 30.0571 0.111671C29.8703 0.0379536 29.67 0 29.4676 0C29.2653 0 29.065 0.0379536 28.8782 0.111671C28.6914 0.185389 28.5219 0.293412 28.3794 0.429509L10.3744 17.4958L2.5777 10.1097C2.28714 9.85325 1.90283 9.71362 1.50573 9.72025C1.10864 9.72689 0.72977 9.87928 0.448939 10.1453C0.168108 10.4114 0.00724504 10.7703 0.0002388 11.1464C-0.00676744 11.5226 0.140631 11.8867 0.41138 12.1619L9.29124 20.5741C9.4331 20.7094 9.60187 20.8167 9.7878 20.8898C9.97372 20.9629 10.1731 21.0004 10.3744 21C10.7806 20.9986 11.1698 20.8456 11.4576 20.5741L30.5559 2.48172C30.8405 2.20822 31 1.83963 31 1.45561C31 1.0716 30.8405 0.703003 30.5559 0.429509Z" fill="#3DC644"/>
+                  </svg>
+              </div>
+              </td>
             </tr>
             <tr class="tariffs-table__row tariffs-table__row--smiles">
               <th class="tariffs-table__cell tariffs-table__cell--caption">Смайлики</th>
-              <td class="tariffs-table__cell tariffs-table__mark tariffs-table__mark--no-check"></td>
-              <td class="tariffs-table__cell tariffs-table__mark tariffs-table__mark--check "></td>
-              <td class="tariffs-table__cell tariffs-table__mark tariffs-table__mark--check"></td>
+              <td class="tariffs-table__cell">
+                <div class="tariffs-table__features tariffs-table__features--smiles">
+                  <span class="visually-hidden">Смайлики не включены в тариф.</span>
+                  <svg class="tariffs-table__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" role="img" aria-label="Данная функция не входит в тариф." xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.6444 13.5065L26.5531 2.58654C26.6947 2.44667 26.8071 2.28009 26.8838 2.09645C26.9605 1.91281 27 1.71577 27 1.51674C27 1.31772 26.9605 1.12068 26.8838 0.937041C26.8071 0.753403 26.6947 0.58682 26.5531 0.446952C26.268 0.165899 25.8837 0.00834432 25.4834 0.00834432C25.0831 0.00834432 24.6988 0.165899 24.4137 0.446952L13.505 11.3669L2.58626 0.446952C2.44641 0.305366 2.27984 0.192953 2.09622 0.11623C1.9126 0.0395068 1.71558 0 1.51658 0C1.31758 0 1.12056 0.0395068 0.936941 0.11623C0.753322 0.192953 0.586757 0.305366 0.446904 0.446952C0.165881 0.73209 0.00834343 1.11638 0.00834343 1.51674C0.00834343 1.91711 0.165881 2.3014 0.446904 2.58654L11.3657 13.5065L0.446904 24.4164C0.305333 24.5562 0.192932 24.7228 0.116217 24.9064C0.0395025 25.0901 0 25.2871 0 25.4861C0 25.6852 0.0395025 25.8822 0.116217 26.0658C0.192932 26.2495 0.305333 26.4161 0.446904 26.5559C0.730723 26.8394 1.11545 26.9987 1.51658 26.9987C1.91771 26.9987 2.30244 26.8394 2.58626 26.5559L13.505 15.6461L24.4137 26.5559C24.698 26.839 25.0823 26.9985 25.4834 27C25.7826 26.9997 26.075 26.9108 26.3237 26.7444C26.5724 26.5781 26.7662 26.3417 26.8806 26.0653C26.9951 25.7888 27.0251 25.4847 26.9668 25.1912C26.9085 24.8977 26.7645 24.6281 26.5531 24.4164L15.6444 13.5065Z" fill="#F25B26"/>
+                  </svg>
+                </div>
+              </td>
+              <td class="tariffs-table__cell">
+                <div class="tariffs-table__features tariffs-table__features--smiles">
+                  <span class="visually-hidden">Смайлики включены в тариф.</span>
+                  <svg class="tariffs-table__icon" width="31" height="21" viewBox="0 0 31 21" fill="none" role="img" aria-label="Данная функция входит в тариф." xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30.5559 0.429509C30.4134 0.293412 30.2439 0.185389 30.0571 0.111671C29.8703 0.0379536 29.67 0 29.4676 0C29.2653 0 29.065 0.0379536 28.8782 0.111671C28.6914 0.185389 28.5219 0.293412 28.3794 0.429509L10.3744 17.4958L2.5777 10.1097C2.28714 9.85325 1.90283 9.71362 1.50573 9.72025C1.10864 9.72689 0.72977 9.87928 0.448939 10.1453C0.168108 10.4114 0.00724504 10.7703 0.0002388 11.1464C-0.00676744 11.5226 0.140631 11.8867 0.41138 12.1619L9.29124 20.5741C9.4331 20.7094 9.60187 20.8167 9.7878 20.8898C9.97372 20.9629 10.1731 21.0004 10.3744 21C10.7806 20.9986 11.1698 20.8456 11.4576 20.5741L30.5559 2.48172C30.8405 2.20822 31 1.83963 31 1.45561C31 1.0716 30.8405 0.703003 30.5559 0.429509Z" fill="#3DC644"/>
+                  </svg>
+                </div>
+              </td>
+              <td class="tariffs-table__cell">
+                <div class="tariffs-table__features tariffs-table__features--smiles">
+                  <span class="visually-hidden">Смайлики включены в тариф.</span>
+                  <svg class="tariffs-table__icon" width="31" height="21" viewBox="0 0 31 21" fill="none" role="img" aria-label="Данная функция входит в тариф." xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30.5559 0.429509C30.4134 0.293412 30.2439 0.185389 30.0571 0.111671C29.8703 0.0379536 29.67 0 29.4676 0C29.2653 0 29.065 0.0379536 28.8782 0.111671C28.6914 0.185389 28.5219 0.293412 28.3794 0.429509L10.3744 17.4958L2.5777 10.1097C2.28714 9.85325 1.90283 9.71362 1.50573 9.72025C1.10864 9.72689 0.72977 9.87928 0.448939 10.1453C0.168108 10.4114 0.00724504 10.7703 0.0002388 11.1464C-0.00676744 11.5226 0.140631 11.8867 0.41138 12.1619L9.29124 20.5741C9.4331 20.7094 9.60187 20.8167 9.7878 20.8898C9.97372 20.9629 10.1731 21.0004 10.3744 21C10.7806 20.9986 11.1698 20.8456 11.4576 20.5741L30.5559 2.48172C30.8405 2.20822 31 1.83963 31 1.45561C31 1.0716 30.8405 0.703003 30.5559 0.429509Z" fill="#3DC644"/>
+                  </svg>
+                </div>
+              </td>
             </tr>
             <tr class="tariffs-table__row tariffs-table__row--comments">
               <th class="tariffs-table__cell tariffs-table__cell--caption">Комментарии</th>
-              <td class="tariffs-table__cell tariffs-table__mark tariffs-table__mark--no-check"></td>
-              <td class="tariffs-table__cell tariffs-table__mark tariffs-table__mark--no-check"></td>
-              <td class="tariffs-table__cell tariffs-table__mark tariffs-table__mark--check"></td>
+              <td class="tariffs-table__cell">
+                <div class="tariffs-table__features tariffs-table__features--comments">
+                  <span class="visually-hidden">Комментарии не включены в тариф.</span>
+                  <svg class="tariffs-table__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" role="img" aria-label="Данная функция не входит в тариф." xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.6444 13.5065L26.5531 2.58654C26.6947 2.44667 26.8071 2.28009 26.8838 2.09645C26.9605 1.91281 27 1.71577 27 1.51674C27 1.31772 26.9605 1.12068 26.8838 0.937041C26.8071 0.753403 26.6947 0.58682 26.5531 0.446952C26.268 0.165899 25.8837 0.00834432 25.4834 0.00834432C25.0831 0.00834432 24.6988 0.165899 24.4137 0.446952L13.505 11.3669L2.58626 0.446952C2.44641 0.305366 2.27984 0.192953 2.09622 0.11623C1.9126 0.0395068 1.71558 0 1.51658 0C1.31758 0 1.12056 0.0395068 0.936941 0.11623C0.753322 0.192953 0.586757 0.305366 0.446904 0.446952C0.165881 0.73209 0.00834343 1.11638 0.00834343 1.51674C0.00834343 1.91711 0.165881 2.3014 0.446904 2.58654L11.3657 13.5065L0.446904 24.4164C0.305333 24.5562 0.192932 24.7228 0.116217 24.9064C0.0395025 25.0901 0 25.2871 0 25.4861C0 25.6852 0.0395025 25.8822 0.116217 26.0658C0.192932 26.2495 0.305333 26.4161 0.446904 26.5559C0.730723 26.8394 1.11545 26.9987 1.51658 26.9987C1.91771 26.9987 2.30244 26.8394 2.58626 26.5559L13.505 15.6461L24.4137 26.5559C24.698 26.839 25.0823 26.9985 25.4834 27C25.7826 26.9997 26.075 26.9108 26.3237 26.7444C26.5724 26.5781 26.7662 26.3417 26.8806 26.0653C26.9951 25.7888 27.0251 25.4847 26.9668 25.1912C26.9085 24.8977 26.7645 24.6281 26.5531 24.4164L15.6444 13.5065Z" fill="#F25B26"/>
+                  </svg>
+                </div>
+              </td>
+              <td class="tariffs-table__cell">
+                <div class="tariffs-table__features tariffs-table__features--comments">
+                  <span class="visually-hidden">Комментарии не включены в тариф.</span>
+                  <svg class="tariffs-table__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" role="img" aria-label="Данная функция не входит в тариф." xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.6444 13.5065L26.5531 2.58654C26.6947 2.44667 26.8071 2.28009 26.8838 2.09645C26.9605 1.91281 27 1.71577 27 1.51674C27 1.31772 26.9605 1.12068 26.8838 0.937041C26.8071 0.753403 26.6947 0.58682 26.5531 0.446952C26.268 0.165899 25.8837 0.00834432 25.4834 0.00834432C25.0831 0.00834432 24.6988 0.165899 24.4137 0.446952L13.505 11.3669L2.58626 0.446952C2.44641 0.305366 2.27984 0.192953 2.09622 0.11623C1.9126 0.0395068 1.71558 0 1.51658 0C1.31758 0 1.12056 0.0395068 0.936941 0.11623C0.753322 0.192953 0.586757 0.305366 0.446904 0.446952C0.165881 0.73209 0.00834343 1.11638 0.00834343 1.51674C0.00834343 1.91711 0.165881 2.3014 0.446904 2.58654L11.3657 13.5065L0.446904 24.4164C0.305333 24.5562 0.192932 24.7228 0.116217 24.9064C0.0395025 25.0901 0 25.2871 0 25.4861C0 25.6852 0.0395025 25.8822 0.116217 26.0658C0.192932 26.2495 0.305333 26.4161 0.446904 26.5559C0.730723 26.8394 1.11545 26.9987 1.51658 26.9987C1.91771 26.9987 2.30244 26.8394 2.58626 26.5559L13.505 15.6461L24.4137 26.5559C24.698 26.839 25.0823 26.9985 25.4834 27C25.7826 26.9997 26.075 26.9108 26.3237 26.7444C26.5724 26.5781 26.7662 26.3417 26.8806 26.0653C26.9951 25.7888 27.0251 25.4847 26.9668 25.1912C26.9085 24.8977 26.7645 24.6281 26.5531 24.4164L15.6444 13.5065Z" fill="#F25B26"/>
+                  </svg>
+                </div>
+              </td>
+              <td class="tariffs-table__cell">
+                <div class="tariffs-table__features tariffs-table__features--comments">
+                  <span class="visually-hidden">Комментарии не включены в тариф.</span>
+                  <svg class="tariffs-table__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" role="img" aria-label="Данная функция не входит в тариф." xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.6444 13.5065L26.5531 2.58654C26.6947 2.44667 26.8071 2.28009 26.8838 2.09645C26.9605 1.91281 27 1.71577 27 1.51674C27 1.31772 26.9605 1.12068 26.8838 0.937041C26.8071 0.753403 26.6947 0.58682 26.5531 0.446952C26.268 0.165899 25.8837 0.00834432 25.4834 0.00834432C25.0831 0.00834432 24.6988 0.165899 24.4137 0.446952L13.505 11.3669L2.58626 0.446952C2.44641 0.305366 2.27984 0.192953 2.09622 0.11623C1.9126 0.0395068 1.71558 0 1.51658 0C1.31758 0 1.12056 0.0395068 0.936941 0.11623C0.753322 0.192953 0.586757 0.305366 0.446904 0.446952C0.165881 0.73209 0.00834343 1.11638 0.00834343 1.51674C0.00834343 1.91711 0.165881 2.3014 0.446904 2.58654L11.3657 13.5065L0.446904 24.4164C0.305333 24.5562 0.192932 24.7228 0.116217 24.9064C0.0395025 25.0901 0 25.2871 0 25.4861C0 25.6852 0.0395025 25.8822 0.116217 26.0658C0.192932 26.2495 0.305333 26.4161 0.446904 26.5559C0.730723 26.8394 1.11545 26.9987 1.51658 26.9987C1.91771 26.9987 2.30244 26.8394 2.58626 26.5559L13.505 15.6461L24.4137 26.5559C24.698 26.839 25.0823 26.9985 25.4834 27C25.7826 26.9997 26.075 26.9108 26.3237 26.7444C26.5724 26.5781 26.7662 26.3417 26.8806 26.0653C26.9951 25.7888 27.0251 25.4847 26.9668 25.1912C26.9085 24.8977 26.7645 24.6281 26.5531 24.4164L15.6444 13.5065Z" fill="#F25B26"/>
+                  </svg>
+                </div>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -194,10 +261,12 @@
         </div>
         <div class="contacts__adress">
           <h3 class="contacts__title">Приезжайте в гости:</h3>
-          <p class="contacts__link">ул. Большая Конюшенная, 19/8</p>
+          <p class="contacts__link">ул. Большая <br>Конюшенная, 19/8</p>
         </div>
       </div>
-      <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3018930805114!2d30.321953058721924!3d59.93871650000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1648889368990!5m2!1sru!2sru" width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="contacts__map-wrapper">
+        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3018930805114!2d30.321953058721924!3d59.93871650000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1648889368990!5m2!1sru!2sru" width="100%" height="450" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </section>
   </main>
   <footer class="footer">
@@ -237,6 +306,7 @@
       </div>
     </div>
   </footer>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

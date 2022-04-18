@@ -1,7 +1,7 @@
 .social__list {
-  width: inherit;
+  width: 200px;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -9,4 +9,9 @@
 
 .social__item {
   padding: 15px;
+  margin: 0 10px;
+
+  :nth-child(3n) {
+    margin: 0;
+  }
 }
