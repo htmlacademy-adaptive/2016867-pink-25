@@ -1,5 +1,43 @@
+.platform {
+  position: relative;
+  border: none;
+  background: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.platform__title {
+  text-align: center;
+  position: absolute;
+  top: 43px;
+  padding: 0 22px;
+  width: 100%;
+}
+
 .platform__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  padding-top: 115px;
+  padding-left: 22px;
+}
+
+.platform__item:not(:last-child) {
+  padding-bottom: 47px;
+}
+
+.platform__item:last-child {
+  padding-bottom: 42px;
+}
+
+@media (min-width: $tablet-width) {
+  .platform {
+    background: #ffffff;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .platform {
+    width: 50%;
+  }
 }

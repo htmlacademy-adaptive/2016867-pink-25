@@ -3,6 +3,26 @@
   width: 100%;
 }
 
+.footer__icon {
+  fill: #283645;
+
+  &--glasses {
+    fill: $pink;
+  }
+}
+
+.footer__link:hover > .footer__icon {
+  fill: $pink;
+}
+
+.footer__link:active > .footer__icon {
+  fill: rgba(210, 40, 86, 0.3);
+}
+
+.footer__link:active > .footer__icon--text {
+  fill: rgba(40, 54, 69, 0.3);
+}
+
 .footer__wrapper {
   display: flex;
   flex-direction: column;
@@ -20,5 +40,12 @@
 
   .footer__logo {
     margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer {
+    padding: 40px 130px;
+    width: 100%;
   }
 }

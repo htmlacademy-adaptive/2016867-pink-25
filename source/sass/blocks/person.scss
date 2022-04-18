@@ -1,17 +1,64 @@
+.person {
+  border: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 43px;
+}
+
 .person__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
+.person__item {
+  margin-bottom: 29px;
+}
+
 .person__label {
   color: $pink;
   line-height: 214%;
   text-transform: uppercase;
+  padding-left: 21px;
 }
 
 .person__input {
   font-size: 18px;
   line-height: 167%;
   width: 100%;
+  border: 2px solid #e5e5e5;
+  border-radius: 1px;
+  height: 59px;
+  padding-left: 20px;
+  outline: none;
+
+  &:hover {
+    border: 2px solid #283645;
+    border-radius: 1px;
+  }
+
+  &:active,
+  &:focus-within {
+    border-color: $pink;
+  }
+
+  &::placeholder {
+    color: #283645;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .person__item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .person__input {
+    flex-grow: 1;
+  }
+
+  .person__label {
+    padding-right: 20px;
+  }
 }

@@ -22,6 +22,11 @@
   text-transform: uppercase;
   color: $pink;
   line-height: 129%;
+  text-align: center;
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .form__button {
@@ -33,6 +38,23 @@
   background: #2aab6d;
   border: 2px solid #2aab6d;
   border-radius: 1px;
+  width: 100%;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  cursor: pointer;
+
+  &:hover {
+    background: #1c9b5e;
+    border: 2px solid #1c9b5e;
+    border-radius: 1px;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background: #1c9b5e;
+    border: 2px solid #1c9b5e;
+    border-radius: 1px;
+  }
 }
 
 .form__required {
@@ -88,15 +110,18 @@
     justify-content: space-between;
   }
 
-  .form__person-contacts {
+  .form fieldset {
+    width: 50%;
+  }
+
+  .form .form__person-contacts,
+  .form .form__emotions,
+  .form .form__achievements,
+  .form .form__button-wrapper {
     width: 100%;
   }
 
-  .form__emotions {
-    width: 100%;
-  }
-
-  .form__button {
+  .form .form__button {
     padding: 23px 55px;
     width: 31%;
   }
