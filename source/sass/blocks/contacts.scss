@@ -26,12 +26,34 @@
 }
 
 .contacts__link {
+  position: relative;
   display: flex;
   justify-content: center;
   font-weight: 300;
   font-size: 24px;
   line-height: 33px;
   color: $pink;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: #283645;
+    color: #283645;
+    text-decoration-thickness: 1px;
+  }
+
+  &:active {
+    opacity: 0.3;
+    text-decoration: none;
+  }
+}
+
+.contacts__adress .contacts__link:hover,
+.contacts__adress .contacts__link:active {
+  text-decoration: none;
+  cursor: default;
+  color: $pink;
+  opacity: 1;
 }
 
 .contacts__map {

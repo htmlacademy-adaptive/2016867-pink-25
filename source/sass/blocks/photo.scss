@@ -1,10 +1,15 @@
 .photo {
   margin: 0;
   padding: 0;
+  padding-top: 20px;
 
   &--panorama {
     width: 100%;
   }
+}
+
+.photo__img {
+  height: auto;
 }
 
 .photo__author {
@@ -34,4 +39,29 @@
   text-align: right;
   text-transform: uppercase;
   color: $pink;
+}
+
+.photo__description {
+  background-color: #f2f2f2;
+
+  &--panorama {
+    margin: 0 20px;
+  }
+}
+
+.photo__img-wrapper--panorama {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    right: 20px;
+    content: "Панорама дня";
+    text-transform: uppercase;
+    background-color: $pink;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 200%;
+  }
 }

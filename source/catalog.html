@@ -19,7 +19,7 @@
 <!--navigation--close - свернуть меню-->
 <!--navigation--open - развернуть меню-->
 <!--navigation--nojs - поведение при отключенном JS-->
-      <nav class="header__navigation navigation navigation-_close navigation--nojs">
+      <nav class="header__navigation navigation navigation--close navigation--nojs">
         <button class="navigation__toggle" type="button">
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
@@ -52,8 +52,8 @@
       </div>
     </div>
     <figure class="photo photo--panorama">
-      <picture class="photo__img-wrapper">
-        <img class="photo__img" src="images/panorama.jpg" alt="Панорама от Анны. Панорама дня." width="320" height="137">
+      <picture class="photo__img-wrapper photo__img-wrapper--panorama">
+        <img class="photo__img photo__img--panorama" src="images/panorama.jpg" alt="Панорама от Анны. Панорама дня." width="320" height="137">
       </picture>
       <div class="photo__description photo__description--panorama">
         <div class="photo__id">
@@ -65,8 +65,8 @@
         <span class="photo__likes">Нравится: 215</span>
       </div>
     </figure>
-    <div class="container">
-      <section class="catalog">
+    <section class="catalog">
+      <div class="container">
         <ul class="catalog__list">
           <li class="catalog__item">
             <figure class="catalog__photo photo">
@@ -94,7 +94,7 @@
                   <span class="photo__author">Антон</span>
                   <span class="photo__date">(12 часов назад)</span>
                 </div>
-                <span class="photo__comment">Соседи будут рады!</span>
+                <p class="photo__comment">Соседи будут рады!</p>
                 <button class="button photo__like-button" type="button">Нравится</button>
                 <span class="photo__likes">Нравится: 666</span>
               </div>
@@ -142,7 +142,7 @@
                   <span class="photo__author">Максим</span>
                   <span class="photo__date">(40 часов назад)</span>
                 </div>
-                <div class="photo__comment">Где снег-то?</div>
+                <p class="photo__comment">Где снег-то?</p>
                 <button class="button photo__like-button" type="button">Нравится</button>
                 <span class="photo__likes">Нравится: 150</span>
               </div>
@@ -165,14 +165,16 @@
             </figure>
           </li>
         </ul>
-      </section>
-      <section class="post">
-        <h2 class="post__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h2>
-        <form class="post__form post-form" action="https://echo.htmlacademy.ru/" method="post">
-          <picture class="post-form__img-wrapper">
-            <img class="post-form__img" src="images/catalog-your-photo.jpg" alt="Ваше фото" width="280" height="374">
-          </picture>
-          <input class="visually-hidden" name="post-form__file-name" type="file">
+      </div>
+    </section>
+    <section class="post">
+      <h2 class="post__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h2>
+      <form class="post__form post-form" action="https://echo.htmlacademy.ru/" method="post">
+        <picture class="post-form__img-wrapper">
+          <img class="post-form__img" src="images/catalog-your-photo.jpg" alt="Ваше фото" width="280" height="374">
+        </picture>
+        <input class="visually-hidden" name="post-form__file-name" type="file">
+        <div class="post-form__controls-wrapper">
           <div class="post-form__controls">
             <div class="post-form__edit-item">
               <button class="button post-form__button post-form__button--active" type="button">Обрезать</button>
@@ -195,9 +197,9 @@
               <button class="button post-form__button post-form__button--reset" type="reset">Отмена</button>
             </div>
           </div>
-        </form>
-      </section>
-    </div>
+        </div>
+      </form>
+    </section>
   </main>
   <footer class="footer">
     <div class="footer__wrapper">

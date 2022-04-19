@@ -3,4 +3,19 @@
   font-size: 14px;
   line-height: 214%;
   text-align: center;
+  padding: 49px 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .post__title {
+    font-size: 18px;
+    line-height: 167%;
+    padding: 73px 119px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .post__title {
+    padding: 70px 389px;
+  }
 }

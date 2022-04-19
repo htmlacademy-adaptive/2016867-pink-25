@@ -13,7 +13,8 @@
     background-color: #ffffff;
     height: 100px;
     width: 100%;
-    transform: rotate(-5deg);
+    transform: rotate(-4.5deg);
+    z-index: 0;
   }
 
   &--index {
@@ -72,6 +73,11 @@
     font-size: 18px;
     line-height: 167%;
     padding: 100px 202px;
+
+    &--index::after {
+      height: 130px;
+      bottom: -50px;
+    }
   }
 
   .intro__text {
