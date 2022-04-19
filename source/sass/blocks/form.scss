@@ -1,3 +1,19 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.form__button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.form__label {
+  text-align: center;
+}
+
 .form__label em {
   color: $pink;
 }
@@ -6,6 +22,11 @@
   text-transform: uppercase;
   color: $pink;
   line-height: 129%;
+  text-align: center;
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .form__button {
@@ -17,8 +38,91 @@
   background: #2aab6d;
   border: 2px solid #2aab6d;
   border-radius: 1px;
+  width: 100%;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  cursor: pointer;
+
+  &:hover {
+    background: #1c9b5e;
+    border: 2px solid #1c9b5e;
+    border-radius: 1px;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background: #1c9b5e;
+    border: 2px solid #1c9b5e;
+    border-radius: 1px;
+  }
 }
 
 .form__required {
   display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    padding: 0 22px;
+  }
+
+  .form__person {
+    order: 0;
+  }
+
+  .form__platform {
+    order: 2;
+  }
+
+  .form__person-contacts {
+    order: 3;
+  }
+
+  .form__achievements {
+    order: 4;
+  }
+
+  .form__emotions {
+    order: 5;
+  }
+
+  .form__button-wrapper {
+    order: 6;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form__button {
+    padding: 23px 55px;
+    width: 48%;
+  }
+
+  .form__required {
+    display: inline-block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form {
+    padding: 0 132px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form fieldset {
+    width: 50%;
+  }
+
+  .form .form__person-contacts,
+  .form .form__emotions,
+  .form .form__achievements,
+  .form .form__button-wrapper {
+    width: 100%;
+  }
+
+  .form .form__button {
+    padding: 23px 55px;
+    width: 31%;
+  }
 }

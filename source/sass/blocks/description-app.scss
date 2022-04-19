@@ -4,6 +4,7 @@
 
 .description-app__wrapper {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 
@@ -21,6 +22,7 @@
 }
 
 .description-app__title {
+  padding-top: 50px;
   text-align: center;
   font-weight: 700;
   font-size: 18px;
@@ -42,12 +44,25 @@
 
 @media (min-width: $tablet-width) {
   .description-app__wrapper {
-    flex-direction: row;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 300px auto;
+  }
+
+  .description-app__img {
+    grid-row: 1/-1;
+    z-index: 1;
+
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+      grid-row: 1/-1;
+    }
   }
 
   .description-app__list {
-    flex-direction: column;
     order: 2;
     margin-left: 20px;
   }
@@ -59,17 +74,21 @@
   .description-app__description {
     text-align: start;
   }
-
-  .description-app__img--mobile {
-    width: auto;
-  }
 }
 
 @media (min-width: $desktop-width) {
+  .description-app__wrapper {
+    display: block;
+  }
+
   .description-app__list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .description-app__item {
+    z-index: 1;
   }
 
   .description-app__title {
@@ -82,6 +101,10 @@
 
   .description-app__img {
     display: block;
+
+    &--tablet {
+      display: none;
+    }
   }
 
   .description-app__img--mobile {

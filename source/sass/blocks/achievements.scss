@@ -1,5 +1,66 @@
+.achievements {
+  position: relative;
+  border: none;
+  background: #f2f2f2;
+  margin: 0;
+}
+
 .achievements__list {
   font-size: 18px;
   line-height: 167%;
   list-style-type: none;
+  padding-top: 115px;
+  padding-left: 22px;
+  margin: 0;
+}
+
+.achievements__title {
+  position: absolute;
+  top: 43px;
+  width: 100%;
+}
+
+.achievements__item:not(:last-child) {
+  padding-bottom: 47px;
+}
+
+.achievements__item:last-child {
+  padding-bottom: 42px;
+}
+
+@media (min-width: $tablet-width) {
+  .achievements {
+    background: #ffffff;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .achievements__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .achievements__item--shark-selfie {
+    order: 1;
+  }
+
+  .achievements__item--chack-norris {
+    order: 2;
+  }
+
+  .achievements__item--held-tower {
+    order: 3;
+  }
+
+  .achievements__item--burned {
+    order: 4;
+  }
+
+  .achievements__item--souvenires {
+    order: 5;
+  }
+
+  .achievements__item--smashed-hotel {
+    order: 6;
+  }
 }

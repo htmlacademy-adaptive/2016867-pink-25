@@ -1,7 +1,7 @@
 .social__list {
-  width: inherit;
+  width: 200px;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -9,4 +9,22 @@
 
 .social__item {
   padding: 15px;
+  margin-right: 9px;
+  margin-bottom: 9px;
+  width: 54px;
+  height: 54px;
+  border: 3px solid rgba(40, 54, 69, 0.1);
+  border-radius: 50%;
+
+  &:nth-child(3n) {
+    margin: 0;
+  }
+
+  &:hover {
+    border: 3px solid rgba(40, 54, 69, 1);
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }

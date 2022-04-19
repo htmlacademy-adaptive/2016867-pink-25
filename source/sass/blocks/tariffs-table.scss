@@ -1,6 +1,27 @@
 .tariffs-table {
   border-collapse: collapse;
-  width: 100%;
+  width: 840px;
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.tariffs-table__features {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 17px 24px 21px;
+
+  &--filter::before {
+    content: "Розовый фильтр";
+  }
+
+  &--smiles::before {
+    content: "Смайлики";
+  }
+
+  &--comments::before {
+    content: "Комментарии";
+  }
 }
 
 .tariffs-table__title {
@@ -27,7 +48,7 @@
   border: 2px solid #e5e5e5;
   text-transform: uppercase;
   border-collapse: collapse;
-  min-width: 50px; /*TODO это очень временно, чтобы не появлялся горизонтальный скролл*/
+  width: 280px;
 
   &--caption {
     display: none;
@@ -60,18 +81,39 @@
 }
 
 @media (min-width: $tablet-width) {
+  .tariffs-table {
+    width: 100%;
+  }
+
   .tariffs-table__cell {
     min-width: 150px;
     max-width: 233px;
 
     &--caption {
       display: table-cell;
-      padding: 5px 15px;
+      padding: 7px 14px;
       font-weight: 400;
       font-size: 14px;
       line-height: 214%;
       text-transform: none;
       text-align: start;
+    }
+  }
+
+  .tariffs-table__features {
+    justify-content: center;
+    padding: 7px 14px;
+
+    &--filter::before {
+      display: none;
+    }
+
+    &--smiles::before {
+      display: none;
+    }
+
+    &--comments::before {
+      display: none;
     }
   }
 }
