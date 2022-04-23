@@ -31,7 +31,7 @@
 
 .navigation__link {
   display: block;
-  padding: 15px 0;
+  padding: 16px 10px 15px 10px;
   font-weight: 700;
   font-size: 18px;
   line-height: 178%;
@@ -64,8 +64,8 @@
   content: "";
   position: absolute;
   top: -10px;
-  left: 0;
-  width: 36px;
+  left: -11px;
+  width: 50px;
   height: 4px;
   background-color: #ffffff;
   box-shadow: 0 10px 0 0 #ffffff, 0 20px 0 0 #ffffff;
@@ -86,9 +86,9 @@
   &::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 36px;
+    top: 3px;
+    left: 14px;
+    width: 30px;
     height: 4px;
     background-color: #ffffff;
   }
@@ -120,12 +120,21 @@
 .navigation--open .navigation__item--head {
   background: #283645;
   box-shadow: 0 1px 0 #000000;
-  height: 110px;
+  height: 69px;
 }
 
 @media (min-width: $tablet-width) {
   .navigation__toggle {
     top: 53px;
+  }
+
+  .navigation--open .navigation__item--head {
+    height: 110px;
+  }
+
+  .navigation--open .navigation__toggle::before,
+  .navigation--open .navigation__toggle::after {
+    top: 0;
   }
 }
 
@@ -143,7 +152,9 @@
   .navigation__item {
     width: auto;
     background-color: transparent;
-    padding: 31px 39px;
+    padding: 0 13px 0 13px;
+    margin-left: 36px;
+    margin-right: 17px;
     box-shadow: none;
     border: none;
   }
@@ -158,9 +169,20 @@
   .navigation__link {
     position: relative;
     text-transform: none;
+    padding: 47px 10px 47px 10px;
     font-weight: 400;
     font-size: 18px;
     line-height: 18px;
+
+    &:first-child {
+      margin-left: 0;
+      padding: 47px 0 47px 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      padding: 47px 0 47px 0;
+    }
 
     &--active::before {
       position: absolute;
@@ -186,6 +208,7 @@
     box-shadow: none;
     height: 110px;
     border-top: none;
+    display: none;
   }
 
   .navigation--close .navigation__item {

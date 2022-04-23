@@ -1,15 +1,25 @@
 .header {
   background-color: #1d2631;
-  background-image: url("../../images/background-mobile.png");
+  background-image: url("../../images/backgroung/background-mobile.png");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: 50% 0;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/backgroung/background-mobile@2x.png");
+    background-size: 100% auto;
+  }
+
   &--main {
-    background-image: url("../../images/phone-screen.png"), url("../../images/background-mobile.png");
+    background-image: url("../../images/hand-phone/hand-phone-mobile.png"), url("../../images/backgroung/background-mobile.png");
     background-repeat: no-repeat, no-repeat;
     background-size: contain, 100% auto;
-    background-position: 50% 175px, 50% 0;
+    background-position: 50% 176px, 50% 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/hand-phone/hand-phone-mobile@2x.png"), url("../../images/backgroung/background-mobile@2x.png");
+      background-size: contain, 100% auto;
+    }
   }
 }
 
@@ -41,13 +51,34 @@
   padding: 36px 46px;
 
   &--index {
+    padding-top: 23px;
     margin: 0;
   }
 }
 
 @media (min-width: $tablet-width) {
-  .header--main {
-    background-position: right 175px, 50% 0;
+  .header {
+    background-color: #1d2631;
+    background-image: url("../../images/backgroung/background-tablet.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 50% 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/backgroung/background-tablet@2x.png");
+      background-size: 100% auto;
+    }
+
+    &--main {
+      background-image: url("../../images/hand-phone/hand-phone-tablet.png"), url("../../images/backgroung/background-tablet.png");
+      background-position: right 184px, 50% 0;
+      background-size: contain, 100% auto;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../images/hand-phone/hand-phone-tablet@2x.png"), url("../../images/backgroung/background-tablet@2x.png");
+        background-size: contain, 100% auto;
+      }
+    }
   }
 
   .header__wrapper-nav {
@@ -70,22 +101,44 @@
     padding: 81px 20px 74px 20px;
 
     &--index {
-      padding: 29px 20px;
+      padding: 30px 57px 30px 66px;
+      margin-top: 64px;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
-  .header--main {
-    background-position: right 175px, 50% 0;
+  .header {
+    background-color: #1d2631;
+    background-image: url("../../images/backgroung/background-desktop.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 50% 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/backgroung/background-desktop@2x.png");
+      background-size: 100% auto;
+    }
+
+    &--main {
+      background-image: url("../../images/hand-phone/hand-phone-desktop.png"), url("../../images/backgroung/background-desktop.png");
+      background-position: 97.9% 100%, 50% 0;
+      background-size: 87.8% auto, 100% auto;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../images/hand-phone/hand-phone-desktop@2x.png"), url("../../images/backgroung/background-desktop@2x.png");
+        background-size: 87.8% auto, 100% auto;
+      }
+    }
   }
 
   .header__wrapper-nav {
-    padding: 0 130px;
+    padding: 0 100px 0 130px;
   }
 
   .header__wrapper--index {
     padding-left: 130px;
+    width: 58%;
   }
 
   .header__title {
@@ -95,7 +148,7 @@
     padding: 74px 202px 104px 202px;
 
     &--index {
-      padding: 29px 20px;
+      padding: 99px 297px 38px 30px;
       font-size: 50px;
       line-height: 136%;
       margin: 0 auto;
