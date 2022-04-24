@@ -11,3 +11,9 @@
 .slider__item:not(:first-child) {
   display: none;
 }
+
+@media (min-width: $tablet-width) {
+  .slider__list {
+    margin-top: 97px;
+  }
+}

@@ -1,6 +1,10 @@
 .footer {
-  padding: 40px 70px;
+  padding: 32px 70px;
   width: 100%;
+}
+
+.footer__logo {
+  margin-bottom: 32px;
 }
 
 .footer__icon {
@@ -8,6 +12,7 @@
 
   &--glasses {
     fill: $pink;
+    margin-right: 9px;
   }
 }
 
@@ -30,6 +35,11 @@
 }
 
 @media (min-width: $tablet-width) {
+  .footer {
+    padding: 26px 20px;
+    width: 100%;
+  }
+
   .footer__wrapper {
     display: flex;
     align-items: center;
@@ -40,12 +50,13 @@
 
   .footer__logo {
     margin: 0;
+    margin-top: -13px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .footer {
-    padding: 40px 130px;
+    padding: 58px 130px;
     width: 100%;
   }
 }

@@ -4,12 +4,13 @@
   position: relative;
   transform: translateX(-50%);
   left: 50%;
+  background-color: #ffffff;
 }
 
 .tariffs-table__features {
   display: flex;
   justify-content: space-between;
-  padding: 24px 17px 24px 21px;
+  padding: 14px 17px 17px 20px;
 
   &--filter::before {
     content: "Розовый фильтр";
@@ -34,14 +35,16 @@
   font-weight: 300;
   font-size: 18px;
   line-height: 167%;
+  margin-top: -2px;
 }
 
 .tariffs-table__head {
-  padding: 15px 15px;
+  padding: 12px 15px;
   margin: 0;
   color: #ffffff;
   background-color: #283645;
   border-top: none;
+  padding-bottom: 28px;
 }
 
 .tariffs-table__cell {
@@ -62,16 +65,16 @@
 
   &--hit::after {
     position: absolute;
-    top: 7px;
-    left: -35px;
+    top: 19px;
+    left: -29px;
     content: "Хит";
-    width: 100px;
+    width: 111px;
     font-weight: 400;
     font-size: 14px;
-    line-height: 214%;
+    line-height: 162%;
     transform: rotate(-45deg);
     text-transform: uppercase;
-    background-color: $pink;
+    background-color: #d22856;
     color: #ffffff;
   }
 
@@ -83,6 +86,10 @@
 @media (min-width: $tablet-width) {
   .tariffs-table {
     width: 100%;
+  }
+
+  .tariffs-table__head {
+    padding-bottom: 9px;
   }
 
   .tariffs-table__cell {
@@ -97,6 +104,12 @@
       line-height: 214%;
       text-transform: none;
       text-align: start;
+    }
+
+    &--hit::after {
+      top: 15px;
+      left: -35px;
+      line-height: 136%;
     }
   }
 
@@ -119,6 +132,17 @@
 }
 
 @media (min-width: $desktop-width) {
+  .tariffs-table__head {
+    padding-bottom: 21px;
+    padding-top: 17px;
+  }
+
+  .tariffs-table__cell--hit::after {
+    top: 19px;
+    left: -30px;
+    line-height: 164%;
+  }
+
   .tariffs-table__title {
     font-size: 18px;
     line-height: 167%;
@@ -128,11 +152,13 @@
     font-weight: 300;
     font-size: 24px;
     line-height: 125%;
+    margin-top: 0;
   }
 
   .tariffs-table__cell--caption {
     font-weight: 400;
     font-size: 18px;
     line-height: 167%;
+    padding: 14px 19px;
   }
 }

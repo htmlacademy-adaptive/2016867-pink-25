@@ -5,7 +5,7 @@
 }
 
 .copyright__title {
-  padding-right: 9px;
+  padding-right: 16px;
 }
 
 .copyright__icon {
@@ -23,6 +23,11 @@
 @media (min-width: $tablet-width) {
   .copyright {
     margin: 0;
+    margin-top: -5px;
+  }
+
+  .copyright__icon {
+    margin-top: 5px;
   }
 }
 
@@ -31,5 +36,9 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 100%;
+  }
+
+  .copyright__title {
+    padding-right: 14px;
   }
 }

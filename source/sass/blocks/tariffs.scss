@@ -1,12 +1,17 @@
 .tariffs__wrapper {
+  position: relative;
   padding: 0;
   width: 100%;
   overflow: hidden;
+  padding-top: 150px;
+  background-color: #f2f2f2;
+  z-index: 0;
 }
 
 @media (min-width: $tablet-width) {
   .tariffs__wrapper {
     padding: 20px;
+    padding-top: 121px;
   }
 
   .tariffs__toggles {
@@ -16,7 +21,7 @@
 
 @media (min-width: $desktop-width) {
   .tariffs__wrapper {
-    padding: 130px 100px;
+    padding: 155px 127px 97px 131px;
   }
 
   .tariffs__toggles {
