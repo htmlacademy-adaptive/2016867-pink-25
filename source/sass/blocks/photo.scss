@@ -1,10 +1,28 @@
 .photo {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
-  padding-top: 20px;
+  line-height: 0;
 
   &--panorama {
     width: 100%;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 19px;
+
+    &::before {
+      position: absolute;
+      right: 20px;
+      content: "Панорама дня";
+      text-transform: uppercase;
+      background-color: #d22856;
+      color: #ffffff;
+      padding: 6px 20px;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 200%;
+    }
   }
 }
 
@@ -30,6 +48,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 171%;
+  margin: 0;
 }
 
 .photo__likes {
@@ -39,29 +58,72 @@
   text-align: right;
   text-transform: uppercase;
   color: $pink;
+  margin-left: 15px;
 }
 
 .photo__description {
   background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  padding: 17px 10px 10px 17px;
 
   &--panorama {
     margin: 0 20px;
+    padding: 18px 5px 8px 17px;
   }
 }
 
-.photo__img-wrapper--panorama {
-  position: relative;
+.photo__button-wrapper {
+  display: flex;
+  margin-top: auto;
+  padding: 11px 0;
+}
 
-  &::before {
-    position: absolute;
-    right: 20px;
-    content: "Панорама дня";
-    text-transform: uppercase;
-    background-color: $pink;
-    color: #ffffff;
-    padding: 5px 10px;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 200%;
+@media (min-width: $tablet-width) {
+  .photo__likes {
+    margin-left: 0;
+  }
+
+  .photo__like-button {
+    order: 2;
+    margin-left: 14px;
+  }
+
+  .photo--panorama .photo__button-wrapper {
+    order: 2;
+  }
+
+  .photo--panorama .photo__comment {
+    order: 3;
+    flex-grow: 1;
+    padding-top: 1px;
+  }
+
+  .photo--panorama {
+    padding-bottom: 50px;
+
+    &::before {
+      top: 76px;
+    }
+  }
+
+  .photo__description {
+    min-height: 155px;
+    padding: 23px 29px 24px 29px;
+
+    &--panorama {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      min-height: auto;
+      padding: 23px 29px 25px 30px;
+    }
+  }
+
+  .photo__button-wrapper {
+    justify-content: space-between;
+    margin-top: auto;
+    padding: 0;
   }
 }

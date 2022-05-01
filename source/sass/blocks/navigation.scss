@@ -124,12 +124,16 @@
 }
 
 @media (min-width: $tablet-width) {
+  .navigation__link {
+    padding: 14px 10px 17px 10px;
+  }
+
   .navigation__toggle {
     top: 53px;
   }
 
   .navigation--open .navigation__item--head {
-    height: 110px;
+    height: 109px;
   }
 
   .navigation--open .navigation__toggle::before,

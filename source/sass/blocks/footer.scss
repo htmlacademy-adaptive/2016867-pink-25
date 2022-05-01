@@ -1,6 +1,10 @@
 .footer {
-  padding: 32px 70px;
+  padding: 40px 70px;
   width: 100%;
+
+  &--index {
+    padding-top: 33px;
+  }
 }
 
 .footer__logo {
@@ -9,10 +13,16 @@
 
 .footer__icon {
   fill: #283645;
+  display: inline-block;
 
   &--glasses {
     fill: $pink;
     margin-right: 9px;
+  }
+
+  &--glasses-star,
+  &--text-star {
+    display: none;
   }
 }
 
@@ -35,9 +45,13 @@
 }
 
 @media (min-width: $tablet-width) {
-  .footer {
+  .footer--index {
     padding: 26px 20px;
     width: 100%;
+  }
+
+  .footer--catalog {
+    padding: 33px 20px;
   }
 
   .footer__wrapper {
@@ -58,5 +72,15 @@
   .footer {
     padding: 58px 130px;
     width: 100%;
+  }
+
+  .footer__icon--text,
+  .footer__icon--glasses {
+    display: none;
+  }
+
+  .footer__icon--glasses-star,
+  .footer__icon--text-star {
+    display: inline-block;
   }
 }

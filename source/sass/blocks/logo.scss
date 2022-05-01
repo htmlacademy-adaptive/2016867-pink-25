@@ -4,6 +4,21 @@
   z-index: 11;
 }
 
+.logo__img {
+  fill: #ffffff;
+
+  &--glasses,
+  &--glasses-star,
+  &--text-star {
+    display: none;
+    fill: #ffffff;
+  }
+
+  &--text {
+    display: inline-block;
+  }
+}
+
 .logo__link {
   padding-top: 7px;
 
@@ -17,6 +32,23 @@
   }
 }
 
-.logo__img {
-  fill: #ffffff;
+@media (min-width: $tablet-width) {
+  .logo__img--glasses {
+    display: inline-block;
+    fill: #ffffff;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo__img--glasses,
+  .logo__img--text {
+    display: none;
+    fill: #ffffff;
+  }
+
+  .logo__img--glasses-star,
+  .logo__img--text-star {
+    display: inline-block;
+    fill: #ffffff;
+  }
 }

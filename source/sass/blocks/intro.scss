@@ -3,19 +3,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 214%;
-  padding: 54px 0;
-
-  &--index::after {
-    content: "";
-    position: absolute;
-    bottom: -7%;
-    left: -5px;
-    background-color: #ffffff;
-    height: 100px;
-    width: 100%;
-    transform: rotate(-5.5deg);
-    z-index: -1;
-  }
+  padding: 44px 15px 30px 15px;
 
   &--index {
     position: relative;
@@ -49,10 +37,10 @@
   .intro {
     font-size: 18px;
     line-height: 167%;
-    padding: 100px 65px;
+    padding: 92px 65px 56px 65px;
 
     &--index {
-      padding: 50px 36px 30px 36px;
+      padding: 50px 36px 26px 36px;
 
       p:last-of-type {
         padding: 0;
@@ -77,11 +65,6 @@
     font-size: 18px;
     line-height: 167%;
     padding: 63px 202px 50px 202px;
-
-    &--index::after {
-      transform: rotate(-4.8deg);
-      bottom: -16%;
-    }
   }
 
   .intro__text {
