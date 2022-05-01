@@ -36,8 +36,8 @@
 
 @media (min-width: $tablet-width) {
   .reviews {
-    margin-top: 55px;
-    padding-bottom: 9px;
+    margin-top: 50px;
+    padding-bottom: 11px;
   }
 
   .reviews__autor {
@@ -70,6 +70,22 @@
     padding: 2px 130px 13px 130px;
   }
 
+  .reviews__wrapper {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 79px;
+      height: 63px;
+      background-image: url("../../images/quotes.svg");
+      background-color: #ffffff;
+      background-repeat: no-repeat;
+      left: 431px;
+      top: 15px;
+    }
+  }
+
   .reviews__item {
     padding: 128px 60px 20px 60px;
   }
@@ -93,6 +109,7 @@
   }
 
   .reviews__comment {
+    max-width: 690px;
     font-size: 18px;
     line-height: 167%;
     text-align: center;
@@ -101,6 +118,21 @@
 
   .reviews__button {
     display: block;
+    width: 22px;
+    height: 41px;
+    background-color: #ffffff;
+    color: #283645;
+    border: none;
+    background-image: url("../../images/left-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 17px;
+
+    &--next {
+      transform: rotateY(-180deg);
+    }
   }
 
   .reviews__wrapper {
