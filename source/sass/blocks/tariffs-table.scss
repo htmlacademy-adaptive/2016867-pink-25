@@ -80,12 +80,15 @@
 
   &--hidden {
     border: none;
+    background-color: #f2f2f2;
+    border-top: 3px solid #f2f2f2;
   }
 }
 
 @media (min-width: $tablet-width) {
   .tariffs-table {
     width: 100%;
+    max-width: 940px;
   }
 
   .tariffs-table__head {

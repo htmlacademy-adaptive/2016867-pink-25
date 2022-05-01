@@ -1,0 +1,112 @@
+.prolog__wrapper {
+  width: 100%;
+  background-color: #1d2631;
+  z-index: -1;
+}
+
+.prolog__wrapper-img {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d2631;
+  background-image: url("../../images/backgroung/background-mobile.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 50% 0;
+  margin-top: -66px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: #1d2631;
+    width: 100%;
+    height: 272px;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/backgroung/background-mobile@2x.png");
+    background-size: 100% auto;
+  }
+}
+
+.prolog__img {
+  position: absolute;
+  top: 88px;
+  left: 0;
+}
+
+.prolog__title {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 129%;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 341px;
+}
+
+
+@media (min-width: $tablet-width) {
+  .prolog__wrapper-img {
+    background-image: url("../../images/backgroung/background-tablet.png");
+    width: 100%;
+    margin-top: -109px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    &::after {
+      display: none;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/backgroung/background-tablet@2x.png");
+      background-size: 100% auto;
+    }
+  }
+
+  .prolog__title {
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 120%;
+    padding-left: 41px;
+  }
+
+  .prolog__img {
+    max-width: 660px;
+    width: 660px;
+    height: auto;
+    top: -21px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .prolog__wrapper-img {
+    width: 100%;
+  }
+
+  .prolog__title {
+    font-size: 50px;
+    line-height: 136%;
+    margin: 0 auto;
+  }
+
+  .prolog__img {
+    max-width: 784px;
+    width: 784px;
+    height: auto;
+    top: -2px;
+    left: 175px;
+  }
+}

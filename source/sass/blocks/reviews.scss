@@ -1,22 +1,9 @@
 .reviews {
-  margin-top: -63px;
-  padding-top: 23px;
+  margin-top: -42px;
   position: relative;
   background-color: #ffffff;
-  padding-bottom: 13px;
+  padding: 22px 20px 46px 20px;
   z-index: 2;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -17%;
-    left: -5px;
-    background-color: #ffffff;
-    height: 100px;
-    width: 100%;
-    transform: rotate(-3.5deg);
-    z-index: -1;
-  }
 }
 
 .reviews__item {
@@ -48,8 +35,9 @@
 }
 
 @media (min-width: $tablet-width) {
-  .reviews::after {
-    bottom: -13%;
+  .reviews {
+    margin-top: 55px;
+    padding-bottom: 9px;
   }
 
   .reviews__autor {
@@ -78,20 +66,12 @@
 }
 
 @media (min-width: $desktop-width) {
-  .reviews::after {
-    content: "";
-    position: absolute;
-    bottom: -11%;
-    left: -5px;
-    background-color: #ffffff;
-    height: 105px;
-    width: 100%;
-    transform: rotate(-4.8deg);
-    z-index: -1;
+  .reviews {
+    padding: 2px 130px 13px 130px;
   }
 
   .reviews__item {
-    padding: 128px 218px 20px 218px;
+    padding: 128px 60px 20px 60px;
   }
 
   .reviews__autor {

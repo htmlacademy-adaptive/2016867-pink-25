@@ -4,16 +4,32 @@
 }
 
 .description-app__wrapper {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding-top: 65px;
+  padding: 65px 20px 0 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    height: 31px;
+    width: 100%;
+    top: -2px;
+    left: 0;
+    clip-path: polygon(0 100%, 0 0, 100% 0);
+  }
 }
 
 .description-app__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.description-app__item:last-child {
+  padding-top: 2px;
 }
 
 .description-app__list .description-app__img {
@@ -33,7 +49,7 @@
   font-size: 18px;
   line-height: 133%;
   margin: 0;
-  padding-top: 17px;
+  padding-top: 16px;
 }
 
 .description-app__description {
@@ -47,7 +63,8 @@
   margin: 26px auto 0 auto;
   width: 100%;
   height: auto;
-  padding: 0 60px 0 62px;
+  position: relative;
+  max-width: 157px;
 }
 
 @media (min-width: $tablet-width) {
@@ -55,17 +72,22 @@
     display: grid;
     grid-template-columns: 43% auto;
     gap: 34px;
-    padding-top: 2px;
+    padding-top: 7px;
     position: relative;
+
+    &::before {
+      height: 54px;
+      top: 0;
+    }
   }
 
   .description-app__img {
     grid-row: 1/-1;
     z-index: 1;
     width: 100%;
-    height: auto;
+    max-width: 300px;
     margin-top: 1px;
-    margin-left: 0;
+    margin-left: auto;
     padding: 0;
   }
 
@@ -88,7 +110,9 @@
 @media (min-width: $desktop-width) {
   .description-app__list .description-app__img {
     display: block;
-    padding: 0 60px 30px 61px;
+    min-width: 186px;
+    width: 186px;
+    max-width: 200px;
   }
 
   .description-app__img {
@@ -103,8 +127,12 @@
 
   .description-app__wrapper {
     display: block;
-    margin-left: 105px;
-    margin-right: 105px;
+    padding-left: 123px;
+    padding-right: 123px;
+
+    &::before {
+      height: 100px;
+    }
   }
 
 
@@ -114,11 +142,19 @@
     gap: 16px;
     padding: 0 0 20px 0;
     margin-left: 0;
-    margin-top: 5px;
+    margin-top: 0;
   }
 
   .description-app__item {
     z-index: 1;
+
+    &:first-child .description-app__text {
+      padding: 39px 33px 33px 36px;
+    }
+
+    &:nth-child(3n) .description-app__text {
+      padding: 38px 36px 33px 33px;
+    }
   }
 
   .description-app__text {
@@ -129,7 +165,7 @@
 
   .description-app__text-wrapper {
     position: relative;
-    margin-top: -110px;
+    margin-top: -82px;
     z-index: 1;
 
     &::before {

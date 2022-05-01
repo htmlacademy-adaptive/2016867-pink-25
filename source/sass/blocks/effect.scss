@@ -1,29 +1,37 @@
 .effect {
+  background-color: #f2f2f2;
+}
+
+.effect__wrapper {
   display: none;
 }
 
 .effect__img {
   width: 100%;
   height: auto;
-  padding: 3px 33px 20px 0;
   border: none;
+  min-width: 238px;
+  max-width: 298px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: $tablet-width) {
-  .effect {
+  .effect__wrapper {
     background-color: #ffffff;
     margin-top: -64px;
     display: grid;
-    grid-template-columns: 44% auto;
+    grid-template-columns: 39% auto;
     padding: 52px 24px 23px 19px;
     position: relative;
     z-index: 2;
-    gap: 38px;
+    gap: 20px;
   }
 
-  .effect__wrapper {
+  .effect__intro {
     display: flex;
     flex-direction: column;
+    padding-left: 50px;
   }
 
   .effect__title {
@@ -49,16 +57,16 @@
 }
 
 @media (min-width: $desktop-width) {
-  .effect {
-    padding: 48px 130px 65px 130px;
+  .effect__wrapper {
+    padding: 48px 130px 61px 130px;
     grid-template-columns: 33% auto;
     background-color: #f2f2f2;
     position: relative;
     z-index: 3;
   }
 
-  .effect__wrapper {
-    padding-left: 22px;
+  .effect__intro {
+    padding-left: 40px;
   }
 
   .effect__title {
@@ -82,8 +90,10 @@
 
   .effect__img {
     width: 100%;
+    min-width: 298px;
+    max-width: 298px;
     height: auto;
-    padding: 3px 12px 0 0;
+    padding: 3px 0 0 0;
     border: none;
     margin-left: 0;
   }

@@ -1,9 +1,13 @@
 .store {
+  position: relative;
   width: 100%;
-  margin-top: 276px;
-  padding-top: 28px;
-  padding-bottom: 15px;
-  background-color: #1d2631;
+  max-width: 320px;
+  margin: 88px auto 0 auto;
+  padding: 0 20px 16px 20px;
+}
+
+.store__wrapper {
+  position: relative;
 }
 
 .store__link {
@@ -11,6 +15,7 @@
 }
 
 .store__download {
+  position: relative;
   display: flex;
   justify-content: center;
   font-weight: 700;
@@ -19,7 +24,6 @@
   color: #ffffff;
   border: 3px solid #ffffff;
   border-radius: 29px;
-  margin: 0 20px;
   padding: 15px 28px;
   background-color: transparent;
 
@@ -35,6 +39,7 @@
 }
 
 .store_platforms {
+  position: relative;
   font-weight: 300;
   line-height: 171%;
   color: #ffffff;
@@ -43,47 +48,62 @@
   margin-right: 20px;
 }
 
-.store__wrapper {
+.store__button-wrapper {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin: 24px 30px -10px 31px;
+  margin: 25px 14px -10px 16px;
 }
 
 @media (min-width: $tablet-width) {
   .store {
     width: 100%;
-    margin-top: 0;
+    max-width: 300px;
     padding-top: 0;
     background-color: transparent;
+    margin-left: 0;
+    margin-top: 203px;
+  }
+
+  .store__wrapper {
+    padding-top: 30px;
   }
 
   .store__download {
     min-width: 300px;
   }
 
-  .store__wrapper {
+  .store__button-wrapper {
+    justify-content: space-between;
     margin-top: 37px;
-    padding-left: 9px;
-    padding-right: 4px;
+    margin-left: 35px;
+    margin-right: 0;
   }
 
   .store_platforms {
     font-size: 18px;
     line-height: 133%;
-    margin: 18px 4px 97px 14px;
+    margin: 18px -44px 97px -6px;
     padding-top: 8px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .store {
-    width: 53%;
-    margin-top: 0;
+    margin-top: 207px;
     padding-top: 0;
-    padding-bottom: 26px;
+    margin-left: 100px;
+    padding-bottom: 27px;
     background-color: transparent;
+    max-width: 320px;
+  }
+
+  .store__wrapper {
+    padding-top: 37px;
+    width: 320px;
+    padding-left: 10px;
   }
 
   .store_platforms {
@@ -92,6 +112,7 @@
     margin-left: 0;
     margin-right: 0;
     margin-top: 26px;
+    padding-right: 10px;
   }
 
   .store__download {
@@ -99,14 +120,18 @@
     font-weight: 700;
     font-size: 21px;
     line-height: 18px;
+    width: 300px;
   }
 
-  .store__wrapper {
+  .store__button-wrapper {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     margin: 0;
     margin-top: 56px;
-    padding: 5px 20px 0 19px;
+    padding: 15px 60px 10px 45px;
+    justify-content: space-between;
+  }
+
+  .store__link {
+    margin: 0;
   }
 }
