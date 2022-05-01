@@ -3,7 +3,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 214%;
-  padding: 44px 38px 30px 38px;
+  padding: 44px 38px 32px 38px;
 
   &--index {
     position: relative;
@@ -64,8 +64,13 @@
   .intro {
     font-size: 18px;
     line-height: 167%;
-    padding: 63px 202px 50px 202px;
-    margin-top: 100px;
+    padding: 63px 280px 69px 280px;
+    margin-top: 28px;
+
+    &--index {
+      margin: 0;
+      padding: 63px 202px 50px 202px;
+    }
   }
 
   .intro__text {

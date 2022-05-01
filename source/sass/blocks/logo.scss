@@ -33,9 +33,13 @@
 }
 
 @media (min-width: $tablet-width) {
+  .logo__link {
+    margin-top: -16px;
+  }
+
   .logo__img--glasses {
     display: inline-block;
-    fill: #ffffff;
+    margin-right: 8px;
   }
 }
 
@@ -43,12 +47,14 @@
   .logo__img--glasses,
   .logo__img--text {
     display: none;
-    fill: #ffffff;
   }
 
   .logo__img--glasses-star,
   .logo__img--text-star {
     display: inline-block;
-    fill: #ffffff;
+  }
+
+  .logo__img--glasses-star {
+    margin-right: 8px;
   }
 }

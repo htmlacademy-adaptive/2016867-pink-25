@@ -93,6 +93,14 @@
     font-size: 40px;
     line-height: 120%;
     padding-left: 41px;
+
+    &--catalog {
+      font-weight: 300;
+      font-size: 50px;
+      line-height: 136%;
+      margin-top: 174px;
+      padding-bottom: 52px;
+    }
   }
 
   .prolog__img {
@@ -112,6 +120,12 @@
     font-size: 50px;
     line-height: 136%;
     margin: 0 auto;
+
+    &--catalog {
+      margin-top: 167px;
+      padding: 0 300px;
+      padding-bottom: 13px;
+    }
   }
 
   .prolog__img {
@@ -122,3 +136,4 @@
     left: 175px;
   }
 }
+

@@ -2,7 +2,7 @@
   margin-top: -42px;
   position: relative;
   background-color: #ffffff;
-  padding: 22px 20px 46px 20px;
+  padding: 22px 20px 34px 20px;
   z-index: 2;
 }
 
@@ -72,6 +72,9 @@
 
   .reviews__wrapper {
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     &::before {
       position: absolute;
@@ -81,13 +84,14 @@
       background-image: url("../../images/quotes.svg");
       background-color: #ffffff;
       background-repeat: no-repeat;
-      left: 431px;
-      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 20px;
     }
   }
 
   .reviews__item {
-    padding: 128px 60px 20px 60px;
+    padding: 133px 60px 20px 60px;
   }
 
   .reviews__autor {
@@ -133,12 +137,6 @@
     &--next {
       transform: rotateY(-180deg);
     }
-  }
-
-  .reviews__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .reviews__toggles {

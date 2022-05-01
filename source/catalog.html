@@ -24,10 +24,10 @@
             <svg class="logo__img logo__img--text" width="74" height="23">
               <use xlink:href="./images/svg-sprite/sprite.svg#logo-text"></use>
             </svg>
-            <svg class="logo__img--glasses-star" width="61" height="40">
+            <svg class="logo__img logo__img--glasses-star" width="61" height="40">
               <use xlink:href="./images/svg-sprite/sprite.svg#logo-glasses-star"></use>
             </svg>
-            <svg class="logo__img--text-star" width="75" height="34">
+            <svg class="logo__img logo__img--text-star" width="75" height="34">
               <use xlink:href="./images/svg-sprite/sprite.svg#logo-text-star"></use>
             </svg>
           </a>
@@ -45,7 +45,7 @@
               <a class=" navigation__link" href="index.html">Главная</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="catalog.html">Фотографии</a>
+              <a class="navigation__link navigation__link--active" href="catalog.html">Фотографии</a>
             </li>
             <li class="navigation__item">
               <a class="navigation__link" href="form.html">Конкурс</a>
@@ -74,20 +74,24 @@
       </div>
     </div>
     <figure class="photo photo--panorama">
-      <picture >
-        <source media="(min-width: 1200px)" srcset="images/panorama/panorama-desktop.jpg 1x, images/panorama/panorama-desktop@2x.jpg 2x" type="image/jpeg">
-        <source media="(min-width: 660px)" srcset="images/panorama/panorama-tablet.jpg 1x, images/panorama/panorama-tablet@2x.jpg 2x" type="image/jpeg">
-        <img class="photo__img photo__img--panorama" src="images/panorama/panorama-mobile.jpg" srcset="images/panorama/panorama-mobile@2x.jpg 2x" alt="Панорама от Анны. Панорама дня." width="320" height="137">
-      </picture>
-      <div class="photo__description photo__description--panorama">
-        <div class="photo__id photo__id--panorama">
-          <span class="photo__author">Анна</span>
-          <span class="photo__date">(5 минут назад)</span>
-        </div>
-        <p class="photo__comment photo__comment--panorama">Прыгать или нет? Напишите в комментарии свой совет и смотрите&nbsp;прямую трансляцию в перископе, задавайте свои вопросы!</p>
-        <div class="photo__button-wrapper photo__button-wrapper--panorama">
-          <button class="button photo__like-button" type="button"><span class="visually-hidden">Нравится</span></button>
-          <span class="photo__likes">Нравится: 215</span>
+      <div class="container">
+        <div class="photo__panorama-wrapper">
+          <picture >
+            <source media="(min-width: 1200px)" srcset="images/panorama/panorama-desktop.jpg 1x, images/panorama/panorama-desktop@2x.jpg 2x" type="image/jpeg">
+            <source media="(min-width: 660px)" srcset="images/panorama/panorama-tablet.jpg 1x, images/panorama/panorama-tablet@2x.jpg 2x" type="image/jpeg">
+            <img class="photo__img photo__img--panorama" src="images/panorama/panorama-mobile.jpg" srcset="images/panorama/panorama-mobile@2x.jpg 2x" alt="Панорама от Анны. Панорама дня." width="320" height="137">
+          </picture>
+          <div class="photo__description photo__description--panorama">
+            <div class="photo__id photo__id--panorama">
+              <span class="photo__author">Анна</span>
+              <span class="photo__date">(5 минут назад)</span>
+            </div>
+            <p class="photo__comment photo__comment--panorama">Прыгать или нет? Напишите в комментарии свой совет и смотрите&nbsp;прямую трансляцию в перископе, задавайте свои вопросы!</p>
+            <div class="photo__button-wrapper photo__button-wrapper--panorama">
+              <button class="button photo__like-button" type="button"><span class="visually-hidden">Нравится</span></button>
+              <span class="photo__likes">Нравится: 215</span>
+            </div>
+          </div>
         </div>
       </div>
     </figure>
@@ -229,25 +233,38 @@
           <input class="visually-hidden" name="post-form__file-name" type="file">
           <div class="post-form__controls-wrapper">
             <div class="post-form__controls">
-              <div class="post-form__edit-item">
-                <button class="button post-form__button post-form__button--crop post-form__button--active" type="button"><span class="visually-hidden">Обрезать</span></button>
+              <div class="post-form__edit-item post-form__edit-item--active">
+                <button class="button post-form__button post-form__button--crop" type="button">
+                  <span class="visually-hidden">Обрезать</span>
+                  <svg class="button post-form__button post-form__button--crop" width="44" height="44">
+                    <use xlink:href="./images/svg-sprite/sprite.svg#crop"></use>
+                  </svg>
+                </button>
                 <input class="post-form__range-input post-form__range-input--crop post-form__range-input--active" name="crop" type="range" min="0" max="100" step="1" value="85">
               </div>
-                <div class="post-form__edit-item">
-                  <button class="button post-form__button post-form__button--fill" type="button"><span class="visually-hidden">Заливка</span></button>
-                  <input class="post-form__range-input post-form__range-input--fill" name="fill" type="range" min="0" max="100" step="1" value="13">
-                </div>
-                <div class="post-form__edit-item">
-                  <button class="button post-form__button post-form__button--contrast" type="button"><span class="visually-hidden">Контраст</span></button>
-                  <input class="post-form__range-input post-form__range-input--contrast" name="contrast" type="range" min="0" max="100" step="1" value="50">
-                </div>
+              <div class="post-form__edit-item">
+                <button class="button post-form__button post-form__button--fill" type="button">
+                  <span class="visually-hidden">Залить</span>
+                  <svg class="button post-form__button post-form__button--fill" width="48" height="43">
+                    <use xlink:href="./images/svg-sprite/sprite.svg#fill"></use>
+                  </svg>
+                </button>
+                <input class="post-form__range-input post-form__range-input--fill" name="fill" type="range" min="0" max="100" step="1" value="13">
               </div>
-              <div class="post-form__submit">
-                <button class="button post-form__button post-form__button--submit" type="submit">Запостить</button>
-                <button class="button post-form__button post-form__button--reset" type="reset">Отмена</button>
+              <div class="post-form__edit-item">
+                <button class="button post-form__button post-form__button--contrast" type="button">
+                  <span class="visually-hidden">Контраст</span>
+                  <svg class="button post-form__button post-form__button--contrast" width="32" height="32">
+                    <use xlink:href="./images/svg-sprite/sprite.svg#contrast"></use>
+                  </svg>
+                </button>
+                <input class="post-form__range-input post-form__range-input--contrast" name="contrast" type="range" min="0" max="100" step="1" value="51">
               </div>
             </div>
-          </div>
+            <div class="post-form__submit">
+              <button class="button post-form__button post-form__button--submit" type="submit">Запостить</button>
+              <button class="button post-form__button post-form__button--reset" type="reset">Отмена</button>
+            </div>
         </form>
       </div>
     </section>
@@ -259,13 +276,13 @@
         <div class="footer__logo">
           <a class="footer__link" href="index.html">
             <svg class="footer__icon footer__icon--glasses" width="59" height="40">
-              <use xlink:href="./images/svg-sprite/sprite.svg#logo-text"></use>
-            </svg>
-            <svg class="footer__icon footer__icon--text" width="74" height="23">
               <use xlink:href="./images/svg-sprite/sprite.svg#logo-glasses"></use>
             </svg>
+            <svg class="footer__icon footer__icon--text" width="74" height="23">
+              <use xlink:href="./images/svg-sprite/sprite.svg#logo-text"></use>
+            </svg>
             <svg class="footer__icon footer__icon--glasses-star" width="61" height="40">
-              <use xlink:href="./images/svg-sprite/sprite.svg#logo-glasses-star"></use>
+              <use xlink:href="./images/svg-sprite/sprite.svg#footer-glasses-star"></use>
             </svg>
             <svg class="footer__icon footer__icon--text-star" width="75" height="34">
               <use xlink:href="./images/svg-sprite/sprite.svg#logo-text-star"></use>

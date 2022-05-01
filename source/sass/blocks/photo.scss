@@ -10,19 +10,24 @@
     position: relative;
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+}
 
-    &::before {
-      position: absolute;
-      right: 20px;
-      content: "Панорама дня";
-      text-transform: uppercase;
-      background-color: #d22856;
-      color: #ffffff;
-      padding: 6px 20px;
-      font-weight: 700;
-      font-size: 12px;
-      line-height: 200%;
-    }
+.photo__panorama-wrapper {
+  width: inherit;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    right: 20px;
+    content: "Панорама дня";
+    text-transform: uppercase;
+    background-color: #d22856;
+    color: #ffffff;
+    padding: 6px 20px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 200%;
   }
 }
 
@@ -88,6 +93,16 @@
   }
 }
 
+.photo__like-button {
+  height: 12px;
+  width: 13px;
+  background-image: url("../../images/heart.svg");
+  background-repeat: no-repeat;
+  border: none;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
 @media (min-width: $tablet-width) {
   .photo__likes {
     margin-left: 0;
@@ -108,17 +123,21 @@
     padding-top: 1px;
   }
 
+  .photo__comment {
+    margin: 0;
+  }
+
   .photo--panorama {
     padding-bottom: 50px;
+  }
 
-    &::before {
-      top: 76px;
-    }
+  .photo__panorama-wrapper::before {
+    top: 56px;
   }
 
   .photo__description {
     min-height: 155px;
-    padding: 23px 29px 24px 29px;
+    padding: 23px 31px 24px 29px;
 
     &--panorama {
       display: flex;
@@ -134,5 +153,25 @@
     justify-content: space-between;
     margin-top: auto;
     padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .photo__panorama-wrapper::before {
+    top: 53px;
+    right: 130px;
+  }
+
+  .photo__description--panorama {
+    margin: 0 130px;
+    padding: 23px 32px 25px 28px;
+  }
+
+  .photo__img {
+    width: 300px;
+
+    &--panorama {
+      width: inherit;
+    }
   }
 }

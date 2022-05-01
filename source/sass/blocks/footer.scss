@@ -12,7 +12,6 @@
 }
 
 .footer__icon {
-  fill: #283645;
   display: inline-block;
 
   &--glasses {
@@ -26,16 +25,18 @@
   }
 }
 
-.footer__link:hover > .footer__icon {
+.footer__link:hover > svg {
   fill: $pink;
 }
 
 .footer__link:active > .footer__icon {
-  fill: rgba(210, 40, 86, 0.3);
+  fill: $pink;
+  opacity: 0.3;
 }
 
 .footer__link:active > .footer__icon--text {
-  fill: rgba(40, 54, 69, 0.3);
+  fill: #283645;
+  opacity: 0.3;
 }
 
 .footer__wrapper {
@@ -72,6 +73,10 @@
   .footer {
     padding: 58px 130px;
     width: 100%;
+
+    &--catalog {
+      padding: 95px 130px 62px;
+    }
   }
 
   .footer__icon--text,
@@ -82,5 +87,10 @@
   .footer__icon--glasses-star,
   .footer__icon--text-star {
     display: inline-block;
+  }
+
+  .footer__icon--glasses-star {
+    margin-right: 8px;
+    fill: $pink;
   }
 }
