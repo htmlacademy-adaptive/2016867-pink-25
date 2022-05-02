@@ -60,11 +60,11 @@
   </header>
   <main class="main-container">
     <h1 class="visually-hidden">Приложение Пинк.</h1>
-    <section class="prolog__wrapper">
+    <section class="prolog prolog__wrapper">
       <div class="prolog__wrapper-img">
         <div class="container">
           <section class="prolog__store store">
-            <h2 class="prolog__title">Взгляните на жизнь иначе!</h2>
+            <h2 class="prolog__title prolog__title--index">Взгляните на жизнь иначе!</h2>
             <picture>
               <source media="(min-width: 1200px)" srcset="images/hand-phone/hand-phone-tablet.png 1x, images/hand-phone/hand-phone-tablet@2x.png 2x" type="image/png">
               <source media="(min-width: 660px)" srcset="images/hand-phone/hand-phone-tablet.png 1x, images/hand-phone/hand-phone-tablet@2x.png 2x" type="image/png">
@@ -153,7 +153,12 @@
       <div class="container">
         <div class="reviews__wrapper slider">
           <h2 class="visually-hidden">Отзывы о приложении.</h2>
-          <button class="button reviews__button reviews__button--previous"><span class="visually-hidden">Предыдущий отзыв.</span></button>
+          <button class="button reviews__button reviews__button--previous">
+            <span class="visually-hidden">Предыдущий отзыв.</span>
+            <svg class="button reviews__button reviews__button--previous" width="22" height="41">
+              <use xlink:href="./images/svg-sprite/sprite.svg#left-arrow"></use>
+            </svg>
+          </button>
           <ul class="reviews__list slider__list">
             <li class="reviews__item slider__item">
               <p class="reviews__autor">Николай Петров</p>
@@ -171,7 +176,12 @@
               <q class="reviews__comment">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</q>
             </li>
           </ul>
-          <button class="button reviews__button reviews__button--next"><span class="visually-hidden">Следующий отзыв.</span></button>
+          <button class="button reviews__button reviews__button--next">
+            <span class="visually-hidden">Следующий отзыв.</span>
+            <svg class="button reviews__button reviews__button--next" width="22" height="41">
+              <use xlink:href="./images/svg-sprite/sprite.svg#right-arrow"></use>
+            </svg>
+          </button>
         </div>
         <div class="reviews__toggles slider__toggles">
           <button class="slider__toggle slider__toggle--active" type="button"><span class="visually-hidden">Первый слайд с отзывом.</span></button>

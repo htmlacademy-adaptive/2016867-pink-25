@@ -127,15 +127,17 @@
     background-color: #ffffff;
     color: #283645;
     border: none;
-    background-image: url("../../images/left-arrow.svg");
-    background-repeat: no-repeat;
-    background-position: center;
     cursor: pointer;
     padding: 0;
     margin-top: 17px;
+    opacity: 0.3;
 
-    &--next {
-      transform: rotateY(-180deg);
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
     }
   }
 

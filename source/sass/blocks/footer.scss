@@ -51,8 +51,13 @@
     width: 100%;
   }
 
-  .footer--catalog {
+  .footer--catalog,
+  .footer--form {
     padding: 33px 20px;
+  }
+
+  .footer--form {
+    padding-top: 62px;
   }
 
   .footer__wrapper {
@@ -76,6 +81,10 @@
 
     &--catalog {
       padding: 95px 130px 62px;
+    }
+
+    &--form {
+      padding: 47px 130px 61px 130px;
     }
   }
 

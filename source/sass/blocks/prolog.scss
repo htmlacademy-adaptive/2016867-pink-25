@@ -47,25 +47,28 @@
 .prolog__title {
   font-weight: 300;
   font-size: 24px;
-  line-height: 129%;
+  line-height: 137%;
+  margin-top: 94px;
+  margin-bottom: 77px;
+  padding-left: 10px;
+  padding-right: 10px;
   color: #ffffff;
   text-align: center;
-  margin: 0;
-  margin-bottom: 341px;
 
-  &--catalog {
+  &--index {
     font-weight: 300;
     font-size: 24px;
-    line-height: 137%;
-    margin-top: 93px;
-    margin-bottom: 77px;
-    padding-left: 4px;
-    padding-right: 4px;
+    line-height: 129%;
     color: #ffffff;
     text-align: center;
+    margin: 0;
+    margin-bottom: 341px;
+  }
+
+  &--form {
+    margin-bottom: 44px;
   }
 }
-
 
 @media (min-width: $tablet-width) {
   .prolog__wrapper-img {
@@ -88,18 +91,25 @@
   }
 
   .prolog__title {
-    margin: 0 auto;
     font-weight: 300;
-    font-size: 40px;
-    line-height: 120%;
-    padding-left: 41px;
+    font-size: 50px;
+    line-height: 136%;
+    margin-top: 174px;
+    padding: 0 50px 52px 50px;
 
-    &--catalog {
+    &--index {
+      margin: 0 auto;
       font-weight: 300;
-      font-size: 50px;
-      line-height: 136%;
-      margin-top: 174px;
-      padding-bottom: 52px;
+      font-size: 40px;
+      line-height: 120%;
+      margin-top: 0;
+      padding-bottom: 0;
+      padding-left: 55px;
+      padding-right: 20px;
+    }
+
+    &--form {
+      padding: 0 50px 17px 50px;
     }
   }
 
@@ -117,14 +127,21 @@
   }
 
   .prolog__title {
-    font-size: 50px;
-    line-height: 136%;
-    margin: 0 auto;
+    margin-top: 167px;
+    padding: 0 300px;
+    padding-bottom: 13px;
 
-    &--catalog {
-      margin-top: 167px;
-      padding: 0 300px;
-      padding-bottom: 13px;
+    &--index {
+      font-size: 50px;
+      line-height: 136%;
+      margin: 0 auto;
+      padding: 0;
+      padding-left: 41px;
+    }
+
+    &--form {
+      padding: 0 223px;
+      padding-bottom: 46px;
     }
   }
 
@@ -136,4 +153,3 @@
     left: 175px;
   }
 }
-
