@@ -50,7 +50,9 @@
 
 .navigation__toggle {
   position: absolute;
-  top: 30px;
+  width: 50px;
+  height: 24px;
+  top: 13px;
   right: 20px;
   z-index: 11;
   display: block;
@@ -63,8 +65,8 @@
 .navigation--close .navigation__toggle::before {
   content: "";
   position: absolute;
-  top: -10px;
-  left: -11px;
+  top: 8px;
+  left: 0;
   width: 50px;
   height: 4px;
   background-color: #ffffff;
@@ -129,11 +131,11 @@
   }
 
   .navigation__toggle {
-    top: 53px;
+    top: 35px;
   }
 
   .navigation--open .navigation__item--head {
-    height: 109px;
+    height: 110px;
   }
 
   .navigation--open .navigation__toggle::before,

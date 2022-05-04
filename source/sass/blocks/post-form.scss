@@ -135,10 +135,6 @@
   margin-top: 38px;
 }
 
-.post-form__controls input[type="range"]:focus {
-  outline: none; /* Удаляем синюю рамку. */
-}
-
 .post-form__controls input[type="range"]::-ms-track {
   width: 100%;
   cursor: pointer;
@@ -203,6 +199,7 @@
     gap: 20px;
     padding-top: 57px;
     padding-bottom: 47px;
+    margin-bottom: 15px;
   }
 
   .post-form__range-input {

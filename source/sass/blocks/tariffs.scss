@@ -52,10 +52,10 @@
 
 @media (min-width: $desktop-width) {
   .tariffs__wrapper {
-    padding: 155px 127px 47px 131px;
+    padding: 155px 128px 47px 128px;
 
     &::before {
-      height: 100px;
+      display: none;
     }
   }
 

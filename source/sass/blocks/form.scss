@@ -74,6 +74,7 @@
 @media (min-width: $tablet-width) {
   .form__wrapper {
     padding: 0;
+    margin-bottom: 35px;
   }
 
   .form__person {
@@ -132,6 +133,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 34px;
   }
 
   .form__person-contacts,
