@@ -5,7 +5,7 @@
 
 .control__input {
   position: absolute;
-  appearance: none;
+  right: 1000000px;
 }
 
 .control__check-box {
@@ -26,7 +26,13 @@
   background-position: center;
 }
 
-.control__input:hover + .control__check-box {
+.control__input:disabled + .control__check-box,
+.control__input:disabled + .control__radio {
+  opacity: 0.5;
+}
+
+.control__input:hover + .control__check-box,
+.control__input:focus-visible + .control__check-box {
   border: 2px solid #283645;
 }
 
@@ -60,7 +66,8 @@
   background-position: center;
 }
 
-.control__input:hover + .control__radio {
+.control__input:hover + .control__radio,
+.control__input:focus-visible + .control__radio {
   border: 2px solid #283645;
 }
 

@@ -17,7 +17,7 @@
     <div class="container">
       <div class="header__wrapper-nav">
         <div class="header__logo logo">
-          <a class="logo__link" href="index.html">
+          <a class="logo__link" href="index.html" aria-label="Логотип приложения PINK.">
             <svg class="logo__img logo__img--glasses" width="59" height="40">
               <use xlink:href="./images/svg-sprite/sprite.svg#logo-glasses"></use>
             </svg>
@@ -42,16 +42,16 @@
           <ul class="navigation__list">
             <li class="navigation__item navigation__item--head"></li>
             <li class="navigation__item">
-              <a class=" navigation__link" href="index.html">Главная</a>
+              <a class=" navigation__link" href="index.html" tabindex="2">Главная</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="catalog.html">Фотографии</a>
+              <a class="navigation__link" href="catalog.html" tabindex="3">Фотографии</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--active" href="form.html">Конкурс</a>
+              <a class="navigation__link navigation__link--active" href="form.html" tabindex="4">Конкурс</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="https://htmlacademy.ru/">HTML Academy</a>
+              <a class="navigation__link" href="https://htmlacademy.ru/" tabindex="5">HTML Academy</a>
             </li>
           </ul>
         </nav>
@@ -81,15 +81,15 @@
               <ul class="person__list">
                 <li class="person__item">
                   <label class="person__label" for="surname">Фамилия:</label>
-                  <input class="person__input" type="text" id="surname" name="surname" placeholder="Укажите фамилию *" required>
+                  <input class="person__input" type="text" id="surname" name="surname" placeholder="Укажите фамилию *" required tabindex="6">
                 </li>
                 <li class="person__item">
                   <label class="person__label" for="name">Имя:</label>
-                  <input class="person__input" type="text" id="name" name="name" placeholder="Введите ваше имя *" required>
+                  <input class="person__input" type="text" id="name" name="name" placeholder="Введите ваше имя *" required tabindex="7">
                 </li>
                 <li class="person__item">
                   <label class="person__label" for="middlename">Отчество:</label>
-                  <input class="person__input" type="text" id="middlename" name="middlename" placeholder="Ну и отчество тоже">
+                  <input class="person__input" type="text" id="middlename" name="middlename" placeholder="Ну и отчество тоже" tabindex="8">
                 </li>
               </ul>
             </fieldset>
@@ -98,42 +98,42 @@
               <ul class="achievements__list">
                 <li class="achievements__item achievements__item--shark-selfie">
                   <label class="achievements__control control">
-                    <input class="control__input" type="checkbox" name="shark-selfie" checked>
+                    <input class="control__input" type="checkbox" name="shark-selfie" checked tabindex="12">
                     <span class="control__check-box"></span>
                     Сделал селфи с акулой
                   </label>
                 </li>
                 <li class="achievements__item achievements__item--burned">
                   <label class="achievements__control control">
-                    <input class="control__input" type="checkbox" name="burned" checked>
+                    <input class="control__input" type="checkbox" name="burned" checked tabindex="13">
                     <span class="control__check-box"></span>
                     Обгорел на пляже
                   </label>
                 </li>
                 <li class="achievements__item achievements__item--chack-norris">
                   <label class="achievements__control control">
-                    <input class="control__input" type="checkbox" name="chack-norris">
+                    <input class="control__input" type="checkbox" name="chack-norris" tabindex="14">
                     <span class="control__check-box"></span>
                     Видел Чака Норриса
                   </label>
                 </li>
                 <li class="achievements__item achievements__item--souvenires">
                   <label class="achievements__control control">
-                    <input class="control__input" type="checkbox" name="souvenires">
+                    <input class="control__input" type="checkbox" name="souvenires" tabindex="15">
                     <span class="control__check-box"></span>
                     Накупил сувениров
                   </label>
                 </li>
                 <li class="achievements__item achievements__item--held-tower">
                   <label class="achievements__control control">
-                    <input class="control__input" type="checkbox" name="held-tower" checked>
+                    <input class="control__input" type="checkbox" name="held-tower" checked tabindex="16">
                     <span class="control__check-box"></span>
                     Удержал башню
                   </label>
                 </li>
                 <li class="achievements__item achievements__item--smashed-hotel">
                   <label class="achievements__control control">
-                    <input class="control__input" type="checkbox" name="smashed-hotel">
+                    <input class="control__input" type="checkbox" name="smashed-hotel" tabindex="17">
                     <span class="control__check-box"></span>
                     Разгромил отель
                   </label>
@@ -145,11 +145,11 @@
               <ul class="person-contacts__list">
                 <li class="person-contacts__item">
                   <label class="person-contacts__label" for="phone">Номер телефона</label>
-                  <input class="person-contacts__input person-contacts__input--phone" type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста">
+                  <input class="person-contacts__input person-contacts__input--phone" type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста" tabindex="10">
                 </li>
                 <li class="person-contacts__item">
                   <label class="person-contacts__label" for="email">Адрес почты</label>
-                  <input class="person-contacts__input person-contacts__input--email" type="email" id="email" name="email" placeholder="Введите почту *" required>
+                  <input class="person-contacts__input person-contacts__input--email" type="email" id="email" name="email" placeholder="Введите почту *" required tabindex="11">
                 </li>
               </ul>
             </fieldset>
@@ -158,21 +158,21 @@
               <ul class="platform__list">
                 <li class="platform__item">
                   <label class="platform__control control">
-                    <input class="control__input" type="radio" name="platform" value="ios" checked>
+                    <input class="control__input" type="radio" name="platform" value="ios" checked tabindex="9">
                     <span class="control__radio"></span>
                     Pink для iOS
                   </label>
                 </li>
                 <li class="platform__item">
                   <label class="platform__control control">
-                    <input class="control__input" type="radio" name="platform" value="andriod">
+                    <input class="control__input" type="radio" name="platform" value="andriod" tabindex="9">
                     <span class="control__radio"></span>
                     Pink на Android
                   </label>
                 </li>
                 <li class="platform__item">
                   <label class="platform__control control">
-                    <input class="control__input" type="radio" name="platform" value="windows">
+                    <input class="control__input" type="radio" name="platform" value="windows" tabindex="9">
                     <span class="control__radio"></span>
                     Windows Phone
                   </label>
@@ -182,7 +182,7 @@
             <fieldset class="form__emotions emotions">
               <legend class="form__title emotions__title">Опишите свои эмоции</legend>
               <div class="emotions__message">
-                <textarea class="emotions__input" id="message" name="message" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                <textarea class="emotions__input" id="message" name="message" placeholder="Можно прям в красках, не стесняясь в выражениях" tabindex="18"></textarea>
               </div>
             </fieldset>
             <div class="form__button-wrapper">
@@ -201,7 +201,7 @@
       <div class="footer__wrapper">
         <h2 class="visually-hidden">О разработчиках.</h2>
         <div class="footer__logo">
-          <a class="footer__link" href="index.html">
+          <a class="footer__link" href="index.html" aria-label="Логотип приложения PINK.">
             <svg class="footer__icon footer__icon--glasses" width="59" height="40">
               <use xlink:href="./images/svg-sprite/sprite.svg#logo-glasses"></use>
             </svg>
@@ -228,21 +228,21 @@
           <h3 class="visually-hidden">Мы в социальных сетях</h3>
           <ul class="social__list">
             <li class="social__item social__item--vk">
-              <a class="social__link" href="https://vk.com/htmlacademy">
+              <a class="social__link" href="https://vk.com/htmlacademy" aria-label="Ссылка на группу ВКонтакте HTML-academy.">
                 <svg lass="social__icon" width="18" height="18">
                   <use xlink:href="./images/svg-sprite/sprite.svg#vk"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item social__item--telegramm">
-              <a class="social__link" href="tg://resolve?domain=htmlacademy">
+              <a class="social__link" href="tg://resolve?domain=htmlacademy" aria-label="Ссылка на канал в телеграмме HTML-academy.">
                 <svg lass="social__icon" width="16" height="14">
                   <use xlink:href="./images/svg-sprite/sprite.svg#tg"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item social__item--youtube">
-              <a class="social__link" href="https://www.youtube.com/c/HTMLAcademyRUS">
+              <a class="social__link" href="https://www.youtube.com/c/HTMLAcademyRUS" aria-label="Ссылка на канал в youtube HTML-academy.">
                 <svg lass="social__icon" width="15" height="13">
                   <use xlink:href="./images/svg-sprite/sprite.svg#youtube"></use>
                 </svg>
