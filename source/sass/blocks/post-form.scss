@@ -44,6 +44,7 @@
   padding: 0;
   border: none;
   border-radius: 0;
+  background-color: transparent;
 }
 
 .post-form__edit-item--active .post-form__button {
@@ -161,8 +162,6 @@
 /* Все то же самое для Firefox */
 .post-form__controls input[type="range"]::-moz-range-thumb {
   border: 2px solid $pink;
-  height: 146px;
-  width: 14px;
   border-radius: 50%;
   background: #ffffff;
   cursor: pointer;

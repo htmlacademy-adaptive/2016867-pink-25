@@ -74,11 +74,16 @@
   width: 100%;
   min-height: 200px;
   background-color: #ffffff;
-  background-image: url("../../images/map.png");
+  background-image: url("../../images/map/map-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
   border: none;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/map/map-mobile@2x.png");
+    background-size: 100% auto;
+  }
 }
 
 .contacts__map-wrapper {
@@ -145,7 +150,14 @@
   }
 
   .contacts__map {
+    width: 100%;
+    background-image: url("../../images/map/map-tablet.png");
     min-height: 374px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/map/map-tablet@2x.png");
+      background-size: 100% auto;
+    }
   }
 }
 
@@ -187,7 +199,14 @@
   }
 
   .contacts__map {
+    width: 100%;
+    background-image: url("../../images/map/map-desktop.png");
     min-height: 500px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/map/map-desktop@2x.png");
+      background-size: 100% auto;
+    }
   }
 
   .contacts__map-wrapper {
