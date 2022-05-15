@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
   background-color: #1d2631;
-  background-image: url("../../images/backgroung/background-mobile.png");
+  background-image: url("../../images/backgroung/background-mobile.webp");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: 50% 0;
@@ -32,7 +32,7 @@
   }
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../images/backgroung/background-mobile@2x.png");
+    background-image: url("../../images/backgroung/background-mobile@2x.webp");
     background-size: 100% auto;
   }
 }
@@ -71,7 +71,7 @@
 
 @media (min-width: $tablet-width) {
   .prolog__wrapper-img {
-    background-image: url("../../images/backgroung/background-tablet.png");
+    background-image: url("../../images/backgroung/background-tablet.webp");
     width: 100%;
     margin-top: -109px;
     display: flex;
@@ -84,7 +84,7 @@
     }
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../images/backgroung/background-tablet@2x.png");
+      background-image: url("../../images/backgroung/background-tablet@2x.webp");
       background-size: 100% auto;
     }
   }
@@ -122,11 +122,11 @@
 
 @media (min-width: $desktop-width) {
   .prolog__wrapper-img {
-    background-image: url("../../images/backgroung/background-desktop.png");
+    background-image: url("../../images/backgroung/background-desktop.webp");
     width: 100%;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../images/backgroung/background-desktop@2x.png");
+      background-image: url("../../images/backgroung/background-desktop@2x.webp");
       background-size: 100% auto;
     }
   }
