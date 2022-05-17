@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   z-index: 11;
+  padding-top: 16px;
 }
 
 .logo__img {
@@ -48,6 +49,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .logo__link {
+    margin-top: 4px;
+  }
+
   .logo__img--glasses,
   .logo__img--text {
     display: none;
