@@ -109,6 +109,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .description-app {
+    margin-top: -2px;
+  }
+
   .description-app::after {
     content: "";
     position: absolute;
