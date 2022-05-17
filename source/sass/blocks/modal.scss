@@ -1,17 +1,29 @@
 .modal {
   display: none;
-  max-width: 100%;
+  max-width: 320px;
   position: fixed;
-  z-index: 5;
-  background-color: #ffffff;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  margin-top: 100px;
 }
 
-.modal--fail {
-  top: 0;/*TODO*/
+.modal--show {
+  display: block;
 }
 
-.modal--success {
-  top: 200px;/*TODO*/
+.modal__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  border-radius: 1px;
 }
 
 .modal__title {
@@ -20,6 +32,7 @@
   line-height: 133%;
   text-align: center;
   color: #000000;
+  margin-top: 19px;
 }
 
 .modal__content {
@@ -27,10 +40,13 @@
   font-size: 14px;
   line-height: 171%;
   text-align: center;
+  padding-top: 10px;
 }
 
 .modal__button {
+  font-family: inherit;
   font-weight: 700;
+  width: 100%;
   font-size: 18px;
   line-height: 167%;
   text-align: center;
@@ -38,4 +54,95 @@
   background: #2aab6d;
   border: 2px solid #2aab6d;
   border-radius: 1px;
+  margin-top: 41px;
+  padding: 14px 20px;
+
+  &:hover {
+    background: #1c9b5e;
+    border: 2px solid #1c9b5e;
+    border-radius: 1px;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background: #1c9b5e;
+    border: 2px solid #1c9b5e;
+    border-radius: 1px;
+  }
+
+  &--success {
+    margin-top: 83px;
+    padding: 14px 20px;
+    width: 100%;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .modal {
+    max-width: 460px;
+    padding: 0;
+  }
+
+  .modal__wrapper {
+    padding: 25px 80px 52px 80px;
+
+    &--success {
+      padding: 25px 70px 52px 70px;
+    }
+  }
+
+  .modal__title {
+    font-size: 30px;
+    padding: 0 22px;
+    margin-bottom: 22px;
+  }
+
+  .modal__content {
+    font-size: 18px;
+    line-height: 133%;
+    padding: 0;
+  }
+
+  .modal__button {
+    margin-top: 33px;
+
+    &--success {
+      margin-top: 80px;
+      margin-left: 20px;
+      margin-right: 20px;
+      width: 300px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .modal {
+    max-width: 780px;
+  }
+
+  .modal__title--success {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 133%;
+    padding: 0;
+  }
+
+  .modal__wrapper {
+    padding: 25px 190px 52px 190px;
+
+    &--success {
+      padding: 25px 160px 52px 160px;
+    }
+  }
+
+  .modal__button {
+    margin-top: 114px;
+    width: 296px;
+
+    &--success {
+      width: 100%;
+      margin-top: 88px;
+    }
+  }
 }

@@ -10,10 +10,6 @@
   align-items: center;
   padding: 0 20px;
   background-color: #ffffff;
-
-  p {
-    text-align: center;
-  }
 }
 
 .contacts__intro {
@@ -48,6 +44,10 @@
   color: $pink;
   margin: 0;
 
+  &--adress {
+    text-align: center;
+  }
+
   &:hover {
     text-decoration: underline;
     text-underline-position: under;
@@ -74,11 +74,16 @@
   width: 100%;
   min-height: 200px;
   background-color: #ffffff;
-  background-image: url("../../images/map.png");
+  background-image: url("../../images/map/map-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
   border: none;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/map/map-mobile@2x.png");
+    background-size: 100% auto;
+  }
 }
 
 .contacts__map-wrapper {
@@ -107,14 +112,13 @@
     align-items: center;
     padding: 0 63px;
 
-    div {
+    .contacts__item {
       width: 40%;
     }
 
-    div:nth-of-type(3n) {
+    .contacts__item:nth-of-type(3n) {
       display: block;
       margin: 0 auto;
-      width: 100%;
     }
   }
 
@@ -131,11 +135,14 @@
 
   .contacts__adress .contacts__title {
     padding-top: 42px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .contacts__map-wrapper {
     position: relative;
     margin-top: 22px;
+    margin-bottom: 15px;
 
     &::before {
       height: 68px;
@@ -143,7 +150,14 @@
   }
 
   .contacts__map {
+    width: 100%;
+    background-image: url("../../images/map/map-tablet.png");
     min-height: 374px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/map/map-tablet@2x.png");
+      background-size: 100% auto;
+    }
   }
 }
 
@@ -156,7 +170,7 @@
     gap: 20px;
     padding: 0 130px;
 
-    div {
+    .contacts__item {
       width: 100%;
     }
   }
@@ -185,7 +199,14 @@
   }
 
   .contacts__map {
+    width: 100%;
+    background-image: url("../../images/map/map-desktop.png");
     min-height: 500px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/map/map-desktop@2x.png");
+      background-size: 100% auto;
+    }
   }
 
   .contacts__map-wrapper {

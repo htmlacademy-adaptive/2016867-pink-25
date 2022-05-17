@@ -1,8 +1,9 @@
 .person {
   border: none;
   margin: 0;
-  padding: 0;
-  padding-top: 43px;
+  padding: 0 20px;
+  padding-top: 4px;
+  margin-bottom: 23px;
 }
 
 .person__list {
@@ -12,14 +13,18 @@
 }
 
 .person__item {
-  margin-bottom: 29px;
+  margin-bottom: 18px;
+
+  :last-child {
+    margin-bottom: 0;
+  }
 }
 
 .person__label {
   color: $pink;
   line-height: 214%;
   text-transform: uppercase;
-  padding-left: 21px;
+  padding-left: 22px;
 }
 
 .person__input {
@@ -28,9 +33,12 @@
   width: 100%;
   border: 2px solid #e5e5e5;
   border-radius: 1px;
-  height: 59px;
+  height: 63px;
   padding-left: 20px;
+  padding-top: 5px;
   outline: none;
+  margin-top: 4px;
+  font-family: inherit;
 
   &:hover {
     border: 2px solid #283645;
@@ -47,18 +55,39 @@
   }
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $tablet-width) {
+  .person {
+    padding-top: 12px;
+    margin-bottom: 10px;
+  }
+
   .person__item {
     display: flex;
     flex-direction: row;
     width: 100%;
+    align-items: center;
+    margin-bottom: 48px;
   }
 
   .person__input {
     flex-grow: 1;
+    padding-top: 0;
   }
 
   .person__label {
     padding-right: 20px;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .person {
+    padding: 14px 7px 0 0;
+    width: 47%;
+    margin-bottom: 0;
+  }
+
+  .person__item:last-child {
+    margin-bottom: 0;
   }
 }

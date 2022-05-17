@@ -1,12 +1,12 @@
 .emotions {
   border: none;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
 }
 
 .emotions__title {
-  padding-top: 42px;
-  padding-bottom: 22px;
+  padding-top: 37px;
+  padding-bottom: 16px;
   width: 100%;
 }
 
@@ -16,12 +16,12 @@
   line-height: 30px;
   border: 2px solid #e5e5e5;
   border-radius: 1px;
-  min-height: 197px;
+  min-height: 201px;
   width: 100%;
-  padding-top: 22px;
-  padding-left: 20px;
-  padding-bottom: 25px;
+  padding: 15px 20px 25px 20px;
   outline: none;
+  resize: none;
+  font-family: inherit;
 
   &:hover {
     border: 2px solid #283645;
@@ -35,5 +35,51 @@
 
   &::placeholder {
     color: #283645;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .emotions {
+    border: 2px solid #e5e5e5;
+    border-radius: 1px;
+    margin: 58px 20px 0 20px;
+    padding-bottom: 7px;
+  }
+
+  .emotions__title {
+    padding: 0 38px;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+  }
+
+  .emotions__message {
+    padding: 37px;
+  }
+
+  .emotions__input {
+    min-height: 193px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .emotions {
+    border: 2px solid #e5e5e5;
+    border-radius: 1px;
+    margin: 58px 0 0 0;
+    padding-bottom: 36px;
+  }
+
+  .emotions__title {
+    padding: 0 38px;
+    width: auto;
+  }
+
+  .emotions__message {
+    padding: 33px 39px 0 39px;
+  }
+
+  .emotions__input {
+    min-height: 128px;
   }
 }

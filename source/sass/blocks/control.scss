@@ -2,3 +2,97 @@
   font-size: 18px;
   line-height: 167%;
 }
+
+.control__input {
+  position: absolute;
+  right: 1000000px;
+}
+
+.control__check-box {
+  position: absolute;
+  margin-left: -60px;
+  margin-top: -4px;
+  min-width: 39px;
+  min-height: 39px;
+  background-color: #ffffff;
+  border-radius: 1px;
+  border: 2px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.control__input:checked + .control__check-box {
+  background-image: url("../../images/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.control__input:disabled + .control__check-box,
+.control__input:disabled + .control__radio {
+  opacity: 0.5;
+}
+
+.control__input:hover + .control__check-box,
+.control__input:focus-visible + .control__check-box {
+  border: 2px solid #283645;
+}
+
+.control__input:checked:hover + .control__check-box {
+  border: 2px solid #283645;
+}
+
+.control__input:active + .control__check-box {
+  border: 2px solid $pink;
+}
+
+.control__input:checked:active + .control__check-box {
+  border: 2px solid $pink;
+}
+
+.control__radio {
+  position: absolute;
+  margin-left: -69px;
+  margin-top: -6px;
+  width: 39px;
+  min-height: 39px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 2px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.control__input:checked + .control__radio {
+  background-image: url("../../images/radio-small.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.control__input:hover + .control__radio,
+.control__input:focus-visible + .control__radio {
+  border: 2px solid #283645;
+}
+
+.control__input:hover + .control__check-box,
+.control__input:hover + .control__radio {
+  border: 2px solid #283645;
+}
+
+.control__input:checked:hover + .control__check-box,
+.control__input:checked:hover + .control__radio {
+  border: 2px solid #283645;
+}
+
+.control__input:active + .control__check-box,
+.control__input:active + .control__radio {
+  border: 2px solid $pink;
+}
+
+.control__input:checked:active + .control__check-box,
+.control__input:checked:active + .control__radio {
+  border: 2px solid $pink;
+}
+
+@media (min-width: $tablet-width) {
+  .control__radio {
+    margin-left: -61px;
+  }
+}

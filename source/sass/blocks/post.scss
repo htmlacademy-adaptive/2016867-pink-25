@@ -4,6 +4,7 @@
   line-height: 214%;
   text-align: center;
   padding: 28px 20px;
+  padding-top: 32px;
 }
 
 @media (min-width: $tablet-width) {
@@ -15,7 +16,11 @@
 }
 
 @media (min-width: $desktop-width) {
+  .post {
+    margin-bottom: -9px;
+  }
+
   .post__title {
-    padding: 70px 389px;
+    padding: 44px 389px 51px 389px;
   }
 }

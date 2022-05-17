@@ -24,39 +24,40 @@
   cursor: pointer;
   position: relative;
   border: none;
-  padding: 0 13px;
-  background-color: #ffffff;
+  padding: 0;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: rgba(40, 54, 69, 0.3);
+  margin: 0 8px;
+}
 
-  &::after {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 50%;
-    height: 6px;
-    width: 6px;
-    border-radius: 50%;
-    background-color: rgba(40, 54, 69, 0.3);
-  }
+.slider__toggle:hover {
+  background-color: rgba(40, 54, 69, 0.6);
+}
+
+.slider__toggle:active {
+  background-color: rgba(40, 54, 69, 0.1);
 }
 
 .slider__toggle--active {
-  &::after {
-    position: absolute;
-    content: "";
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    border: 3px solid #283645;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  border: 3px solid #283645;
+  background-color: #ffffff;
+  transform: translateY(-25%);
+
+  &:hover {
     background-color: #ffffff;
-    transform: translateY(-25%);
   }
 }
 
 @media (min-width: $tablet-width) {
   .slider__toggles {
     margin-top: 30px;
+    padding-top: 8px;
+    margin-right: -2px;
   }
 }
 

@@ -1,21 +1,27 @@
-.form {
+.form__wrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  margin-bottom: 19px;
 }
 
 .form__button-wrapper {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  padding: 0 20px;
+  margin-top: 42px;
 }
 
 .form__label {
   text-align: center;
+  text-transform: uppercase;
+  margin-top: 37px;
 }
 
-.form__label em {
+.form__required {
   color: $pink;
+  font-style: normal;
 }
 
 .form__title {
@@ -39,8 +45,8 @@
   border: 2px solid #2aab6d;
   border-radius: 1px;
   width: 100%;
-  padding-top: 23px;
-  padding-bottom: 23px;
+  padding-top: 16px;
+  padding-bottom: 13px;
   cursor: pointer;
 
   &:hover {
@@ -55,19 +61,24 @@
     border: 2px solid #1c9b5e;
     border-radius: 1px;
   }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
 }
 
-.form__required {
+.form__hidden {
   display: none;
 }
 
 @media (min-width: $tablet-width) {
-  .form {
-    padding: 0 22px;
+  .form__wrapper {
+    padding: 0;
+    margin-bottom: 35px;
   }
 
   .form__person {
-    order: 0;
+    order: 1;
   }
 
   .form__platform {
@@ -91,38 +102,57 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-top: 67px;
   }
 
   .form__button {
-    padding: 23px 55px;
-    width: 48%;
+    padding: 14px 56px;
+    width: auto;
   }
 
-  .form__required {
+  .form__hidden {
     display: inline-block;
+
+    &--not-tablet {
+      display: none;
+    }
+  }
+
+  .form__title--hidden {
+    display: inline-block;
+  }
+
+  .form__label {
+    margin-top: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .form {
-    padding: 0 132px;
+  .form__wrapper {
+    padding: 0 130px;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 34px;
   }
 
-  .form fieldset {
-    width: 50%;
-  }
-
-  .form .form__person-contacts,
-  .form .form__emotions,
-  .form .form__achievements,
-  .form .form__button-wrapper {
+  .form__person-contacts,
+  .form__emotions,
+  .form__achievements,
+  .form__button-wrapper {
     width: 100%;
   }
 
   .form .form__button {
-    padding: 23px 55px;
-    width: 31%;
+    padding: 15px 56px;
+  }
+
+  .form__button-wrapper {
+    padding: 0;
+    margin-top: 65px;
+  }
+
+  .form__hidden--not-tablet {
+    display: inline-block;
   }
 }

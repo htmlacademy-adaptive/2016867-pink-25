@@ -50,7 +50,9 @@
 
 .navigation__toggle {
   position: absolute;
-  top: 30px;
+  width: 50px;
+  height: 24px;
+  top: 13px;
   right: 20px;
   z-index: 11;
   display: block;
@@ -63,8 +65,8 @@
 .navigation--close .navigation__toggle::before {
   content: "";
   position: absolute;
-  top: -10px;
-  left: -11px;
+  top: 8px;
+  left: 0;
   width: 50px;
   height: 4px;
   background-color: #ffffff;
@@ -86,8 +88,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 3px;
-    left: 14px;
+    top: 20px;
+    left: 23px;
     width: 30px;
     height: 4px;
     background-color: #ffffff;
@@ -129,16 +131,16 @@
   }
 
   .navigation__toggle {
-    top: 53px;
+    top: 35px;
   }
 
   .navigation--open .navigation__item--head {
-    height: 109px;
+    height: 110px;
   }
 
   .navigation--open .navigation__toggle::before,
   .navigation--open .navigation__toggle::after {
-    top: 0;
+    top: 17px;
   }
 }
 
@@ -191,10 +193,10 @@
     &--active::before {
       position: absolute;
       content: "";
-      right: 0;
-      bottom: 0;
-      left: 0;
+      bottom: 36px;
+      left: -1px;
       height: 2px;
+      right: 1px;
       background-color: #ffffff;
     }
 

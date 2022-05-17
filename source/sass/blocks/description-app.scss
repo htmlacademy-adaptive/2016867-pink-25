@@ -1,4 +1,5 @@
 .description-app {
+  position: relative;
   background-color: #f2f2f2;
   z-index: -1;
 }
@@ -16,7 +17,7 @@
     background-color: #ffffff;
     height: 31px;
     width: 100%;
-    top: -2px;
+    top: 0;
     left: 0;
     clip-path: polygon(0 100%, 0 0, 100% 0);
   }
@@ -108,6 +109,21 @@
 }
 
 @media (min-width: $desktop-width) {
+  .description-app {
+    margin-top: -2px;
+  }
+
+  .description-app::after {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    height: 100px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 100%, 0 0, 100% 0);
+  }
+
   .description-app__list .description-app__img {
     display: block;
     min-width: 186px;
@@ -131,7 +147,7 @@
     padding-right: 123px;
 
     &::before {
-      height: 100px;
+      display: none;
     }
   }
 

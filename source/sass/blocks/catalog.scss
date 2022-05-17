@@ -4,7 +4,7 @@
   grid-template-columns: 1fr;
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
 }
 
 @media (min-width: $tablet-width) {
@@ -16,5 +16,9 @@
 @media (min-width: $desktop-width) {
   .catalog__list {
     grid-template-columns: 1fr 1fr 1fr;
+    width: 940px;
+    margin: 0 auto;
+    padding: 0;
+    row-gap: 53px;
   }
 }

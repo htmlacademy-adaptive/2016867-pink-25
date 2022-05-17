@@ -1,6 +1,7 @@
 .tariffs {
+  position: relative;
   background-color: #f2f2f2;
-  padding-bottom: 55px;
+  padding-bottom: 43px;
 }
 
 .tariffs__wrapper {
@@ -27,6 +28,7 @@
 
 .tariffs__toggles {
   margin-top: 0;
+  margin-left: -1px;
 }
 
 @media (min-width: $tablet-width) {
@@ -50,14 +52,25 @@
 
 @media (min-width: $desktop-width) {
   .tariffs__wrapper {
-    padding: 155px 127px 47px 131px;
+    padding: 155px 128px 47px 128px;
 
     &::before {
-      height: 100px;
+      display: none;
     }
   }
 
   .tariffs__toggles {
     display: none;
+  }
+
+  .tariffs::after {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    height: 100px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 100%, 0 0, 100% 0);
   }
 }
