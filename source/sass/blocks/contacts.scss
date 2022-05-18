@@ -10,6 +10,8 @@
   align-items: center;
   padding: 0 20px;
   background-color: #ffffff;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .contacts__intro {
@@ -18,7 +20,8 @@
   font-size: 24px;
   line-height: 120%;
   padding: 17px 20px 16px 20px;
-  margin-bottom: 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .contacts__title {
@@ -180,6 +183,7 @@
     font-size: 50px;
     line-height: 136%;
     padding: 9px 262px 15px 262px;
+    margin-top: 50px;
   }
 
   .contacts__title {
