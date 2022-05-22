@@ -52,7 +52,7 @@
 <!--navigation--close - свернуть меню-->
 <!--navigation--open - развернуть меню-->
 <!--navigation--nojs - поведение при отключенном JS-->
-        <nav class="header__navigation navigation navigation--open navigation--nojs">
+        <nav class="header__navigation navigation navigation--close navigation--nojs">
           <button class="navigation__toggle" type="button">
             <span class="visually-hidden">Открыть/закрыть меню</span>
           </button>
@@ -77,35 +77,37 @@
   </header>
   <main class="main-container">
     <h1 class="visually-hidden">Приложение Пинк.</h1>
-    <section class="prolog prolog__wrapper">
-      <div class="prolog__wrapper-img">
-        <div class="container">
-          <section class="prolog__store store">
-            <h2 class="prolog__title prolog__title--index">Взгляните на жизнь иначе!</h2>
-            <picture>
-              <source media="(min-width: 1200px)" srcset="images/hand-phone/hand-phone-tablet.webp 1x, images/hand-phone/hand-phone-tablet@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 1200px)" srcset="images/hand-phone/hand-phone-tablet.png 1x, images/hand-phone/hand-phone-tablet@2x.png 2x" type="image/png">
-              <source media="(min-width: 660px)" srcset="images/hand-phone/hand-phone-tablet.webp 1x, images/hand-phone/hand-phone-tablet@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 660px)" srcset="images/hand-phone/hand-phone-tablet.png 1x, images/hand-phone/hand-phone-tablet@2x.png 2x" type="image/png">
-              <source media="(min-width: 320px)" srcset="images/hand-phone/hand-phone-mobile.webp 1x, images/hand-phone/hand-phone-mobile@2x.webp 2x" type="image/webp">
-              <img class="prolog__img" src="images/hand-phone/hand-phone-mobile.png" srcset="images/hand-phone/hand-phone-mobile@2x.png 2x" alt="Пример работы приложения." width="320" height="286">
-            </picture>
-            <div class="store__wrapper">
-              <a class="button store__download" href="https://www.apple.com/ru/app-store/#">Скачать приложение</a>
-              <div class="store__button-wrapper">
-                <a class="store__link" href="https://www.apple.com/ru/app-store/#">
-                  <img class="store__icon store__icon--apple" src="images/apple-logo.svg" alt="Скачать приложение для apple." width="47" height="56">
-                </a>
-                <a class="store__link" href="https://play.google.com/#">
-                  <img class="store__icon store__icon--android" src="images/android-logo.svg" alt="Скачать приложение для andriod." width="43" height="47">
-                </a>
-                <a class="store__link" href="https://www.microsoft.com/#">
-                  <img class="store__icon store__icon--microsoft" src="images/microsoft-logo.svg" alt="Скачать приложение для microsoft." width="44" height="41">
-                </a>
+    <section class="prolog">
+      <div class="prolog__wrapper">
+        <div class="prolog__wrapper-img">
+          <div class="container">
+            <section class="prolog__store store">
+              <h2 class="prolog__title prolog__title--index">Взгляните на жизнь иначе!</h2>
+              <picture>
+                <source media="(min-width: 1200px)" srcset="images/hand-phone/hand-phone-tablet.webp 1x, images/hand-phone/hand-phone-tablet@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 1200px)" srcset="images/hand-phone/hand-phone-tablet.png 1x, images/hand-phone/hand-phone-tablet@2x.png 2x" type="image/png">
+                <source media="(min-width: 660px)" srcset="images/hand-phone/hand-phone-tablet.webp 1x, images/hand-phone/hand-phone-tablet@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 660px)" srcset="images/hand-phone/hand-phone-tablet.png 1x, images/hand-phone/hand-phone-tablet@2x.png 2x" type="image/png">
+                <source media="(min-width: 320px)" srcset="images/hand-phone/hand-phone-mobile.webp 1x, images/hand-phone/hand-phone-mobile@2x.webp 2x" type="image/webp">
+                <img class="prolog__img" src="images/hand-phone/hand-phone-mobile.png" srcset="images/hand-phone/hand-phone-mobile@2x.png 2x" alt="Пример работы приложения." width="320" height="286">
+              </picture>
+              <div class="store__wrapper">
+                <a class="button store__download" href="https://www.apple.com/ru/app-store/#">Скачать приложение</a>
+                <div class="store__button-wrapper">
+                  <a class="store__link" href="https://www.apple.com/ru/app-store/#">
+                    <img class="store__icon store__icon--apple" src="images/apple-logo.svg" alt="Скачать приложение для apple." width="47" height="56">
+                  </a>
+                  <a class="store__link" href="https://play.google.com/#">
+                    <img class="store__icon store__icon--android" src="images/android-logo.svg" alt="Скачать приложение для andriod." width="43" height="47">
+                  </a>
+                  <a class="store__link" href="https://www.microsoft.com/#">
+                    <img class="store__icon store__icon--microsoft" src="images/microsoft-logo.svg" alt="Скачать приложение для microsoft." width="44" height="41">
+                  </a>
+                </div>
+                <p class="store__platforms">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
               </div>
-              <p class="store_platforms">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-            </div>
-          </section>
+            </section>
+          </div>
         </div>
       </div>
     </section>
@@ -182,9 +184,9 @@
         </div>
       </div>
     </section>
-    <section class="reviews">
+    <section class="reviews slider">
       <div class="container">
-        <div class="reviews__wrapper slider">
+        <div class="reviews__wrapper">
           <h2 class="visually-hidden">Отзывы о приложении.</h2>
           <button class="button reviews__button reviews__button--previous">
             <span class="visually-hidden">Предыдущий отзыв.</span>

@@ -19,7 +19,6 @@
   margin-left: auto;
   margin-right: auto;
 
-
   &::after {
     position: absolute;
     content: "";
@@ -124,6 +123,7 @@
   .prolog__wrapper-img {
     background-image: url("../../images/backgroung/background-desktop.webp");
     width: 100%;
+    margin-top: -111px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../images/backgroung/background-desktop@2x.webp");

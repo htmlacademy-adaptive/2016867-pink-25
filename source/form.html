@@ -52,7 +52,7 @@
 <!--navigation--close - свернуть меню-->
 <!--navigation--open - развернуть меню-->
 <!--navigation--nojs - поведение при отключенном JS-->
-        <nav class="header__navigation navigation navigation--open navigation--nojs">
+        <nav class="header__navigation navigation navigation--close navigation--nojs">
           <button class="navigation__toggle" type="button">
             <span class="visually-hidden">Открыть/закрыть меню</span>
           </button>
@@ -77,17 +77,19 @@
   </header>
   <main class="main-container">
     <h1 class="visually-hidden">Приложение PINK</h1>
-    <section class="prolog prolog__wrapper prolog__wrapper">
-      <div class="prolog__wrapper-img">
-        <div class="container">
-          <h2 class="prolog__title prolog__title--form">Конкурс на самое безбашенное путешествие с Пинк</h2>
+    <section class="prolog">
+      <div class="prolog__wrapper">
+        <div class="prolog__wrapper-img">
+          <div class="container">
+            <h2 class="prolog__title prolog__title--form">Конкурс на самое безбашенное путешествие с Пинк</h2>
+          </div>
         </div>
       </div>
     </section>
     <div class="container">
       <h2 class="visually-hidden">Описание конкурса.</h2>
       <div class="intro intro--form">
-        <span class="intro__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="form__hidden">Пожалуйста, заполните форму ниже:</span></span>
+        <span class="intro__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="intro__hidden">Пожалуйста, заполните форму ниже:</span></span>
       </div>
     </div>
     <section class="form">
@@ -199,6 +201,7 @@
           <fieldset class="form__emotions emotions">
             <legend class="form__title emotions__title">Опишите свои эмоции</legend>
             <div class="emotions__message">
+              <label class="emotions__label" for="message">Номер телефона</label>
               <textarea class="emotions__input" id="message" name="message" placeholder="Можно прям в красках, не стесняясь в выражениях" tabindex="18"></textarea>
             </div>
           </fieldset>
